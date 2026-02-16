@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/sync-materials.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },
