@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 12 - Reading</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .strip-gold {
+            background: var(--parchment);
+            border-color: var(--award-gold);
+        }
+
+        .strip-green {
+            background: #E8F5E9;
+            border-color: var(--emerald-green);
+        }
+
+        .strip-blue {
+            background: #E3F2FD;
+            border-color: #2196F3;
+        }
+
+        .tracker {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            background: white;
+            border: 5px solid var(--award-gold);
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .star-check {
+            font-size: 3em;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .star-check:hover {
+            color: var(--award-gold);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Reading Ribbons</button>
+    <div class="container">
+        <h1>🏆 Master Reader</h1>
+        <p style="text-align: center; font-family: var(--font-fancy); font-size: 2em; margin-bottom: 30px;">
+            The final sentences!
+        </p>
+
+        <div class="strip strip-green">
+            This is my garden. 🏡
+        </div>
+
+        <div class="strip strip-gold">
+            I grew these plants. 🌱
+        </div>
+
+        <div class="strip strip-blue">
+            My garden needs sun and water. ☀️💧
+        </div>
+
+        <div class="strip">
+            I love my garden! ❤️
+        </div>
+
+        <div class="tracker">
+            <div>Mon <div class="star-check">⭐</div>
+            </div>
+            <div>Tue <div class="star-check">⭐</div>
+            </div>
+            <div>Wed <div class="star-check">⭐</div>
+            </div>
+            <div>Thu <div class="star-check">⭐</div>
+            </div>
+            <div>Fri <div class="star-check">⭐</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 - Soil & Compost Words</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .subtitle {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.4em;
+            color: var(--compost-warm);
+            margin-bottom: 40px;
+        }
+
+        /* Unique soil/compost themed cards */
+        .card-wet {
+            border-color: var(--moisture-dark);
+            background: linear-gradient(135deg, #B2DFDB 0%, #80CBC4 100%);
+        }
+
+        .card-dry {
+            border-color: var(--dry-crack);
+            background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+        }
+
+        .card-soil {
+            border-color: var(--soil-rich);
+            background: linear-gradient(135deg, #D7CCC8 0%, #BCAAA4 100%);
+        }
+
+        .card-plant {
+            border-color: var(--organic-green);
+            background: linear-gradient(135deg, #C5E1A5 0%, #AED581 100%);
+        }
+
+        .card-root {
+            border-color: var(--compost-brown);
+            background: linear-gradient(135deg, #BCAAA4 0%, #A1887F 100%);
+        }
+
+        .new-badge {
+            background: linear-gradient(135deg, #FFD54F 0%, #FFC107 100%);
+            color: var(--soil-dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-family: var(--font-display);
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-top: 10px;
+            display: inline-block;
+            box-shadow: 0 2px 8px rgba(255, 193, 7, 0.4);
+        }
+
+        .review-badge {
+            background: #E0E0E0;
+            color: #616161;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-family: var(--font-display);
+            font-size: 0.8em;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .compost-tip {
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(to bottom,
+                    #EFEBE9 0%,
+                    #D7CCC8 50%,
+                    #BCAAA4 100%);
+            border-radius: 25px;
+            border: 4px solid var(--compost-brown);
+        }
+
+        .compost-tip h3 {
+            color: var(--soil-dark);
+            font-family: var(--font-earthy);
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        .compost-tip p {
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--soil-dark);
+            line-height: 1.7;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Soil Words</button>
+
+    <div class="container">
+        <h1>🪱 Soil & Compost Words</h1>
+        <p class="subtitle">Week 3: Learning about Earth's Layers ~ Wet, Dry, and Living Soil!</p>
+
+        <div class="card-grid">
+            <!-- New Words -->
+            <div class="card card-wet">
+                <div class="icon-large">💧</div>
+                <div class="word-large">wet</div>
+                <div class="new-badge">✨ NEW</div>
+            </div>
+
+            <div class="card card-dry">
+                <div class="icon-large">☀️</div>
+                <div class="word-large">dry</div>
+                <div class="new-badge">✨ NEW</div>
+            </div>
+
+            <!-- Review Words -->
+            <div class="card card-soil">
+                <div class="icon-large">🟤</div>
+                <div class="word-large">soil</div>
+                <div class="review-badge">Review</div>
+            </div>
+
+            <div class="card card-plant">
+                <div class="icon-large">🌱</div>
+                <div class="word-large">plant</div>
+                <div class="review-badge">Review</div>
+            </div>
+
+            <div class="card card-root">
+                <div class="icon-large">🥕</div>
+                <div class="word-large">root</div>
+                <div class="review-badge">Review</div>
+            </div>
+        </div>
+
+        <div class="compost-tip">
+            <h3>🍂 Soil Science Discovery</h3>
+            <p>
+                This week we explore what makes soil special! <strong>Wet</strong> soil holds water for thirsty plants.
+                <strong>Dry</strong> soil needs rain. And when we add compost (old food scraps and leaves),
+                the soil becomes even richer! These five words help us talk about the earth beneath our feet. 🪱
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

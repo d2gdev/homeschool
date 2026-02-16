@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Soil - Week 3 Reader</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .book-instructions {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--soil-dark);
+            margin: 30px 0;
+            padding: 25px;
+            background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+            border-radius: 20px;
+            border: 4px solid var(--compost-brown);
+        }
+
+        .pages-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .book-page {
+            background: white;
+            border: 6px solid var(--compost-brown);
+            border-radius: 25px;
+            padding: 40px;
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 35px rgba(121, 85, 72, 0.3);
+            page-break-inside: avoid;
+        }
+
+        .book-page::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 15px;
+            background: linear-gradient(to right,
+                    var(--compost-brown) 0%,
+                    var(--soil-rich) 50%,
+                    var(--compost-brown) 100%);
+            border-radius: 0 0 20px 20px;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 30px;
+            right: 25px;
+            font-family: var(--font-display);
+            font-size: 1.2em;
+            color: white;
+            background: var(--compost-brown);
+            padding: 8px 20px;
+            border-radius: 25px;
+            box-shadow: 0 3px 10px rgba(121, 85, 72, 0.4);
+        }
+
+        .book-cover {
+            background: linear-gradient(to bottom,
+                    #E8F5E9 0%,
+                    #EFEBE9 40%,
+                    #D7CCC8 100%);
+            border-color: var(--soil-dark);
+        }
+
+        .book-title {
+            font-family: var(--font-display);
+            font-size: 3.5em;
+            font-weight: 600;
+            color: var(--soil-dark);
+            margin: 25px 0;
+            text-shadow: 3px 3px 0 rgba(161, 136, 127, 0.3);
+        }
+
+        .book-subtitle {
+            font-family: var(--font-earthy);
+            font-size: 1.5em;
+            color: var(--compost-brown);
+            margin-top: 20px;
+        }
+
+        .page-illustration {
+            font-size: 7em;
+            margin: 35px 0;
+            filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.2));
+        }
+
+        .page-text {
+            font-family: var(--font-earthy);
+            font-size: 2.8em;
+            color: var(--soil-dark);
+            line-height: 1.5;
+            margin: 25px 0;
+        }
+
+        .page-wet {
+            background: linear-gradient(to bottom, #E0F2F1 0%, white 100%);
+        }
+
+        .page-dry {
+            background: linear-gradient(to bottom, #EFEBE9 0%, white 100%);
+        }
+
+        .page-soil {
+            background: linear-gradient(to bottom, #D7CCC8 0%, white 100%);
+        }
+
+        .page-compost {
+            background: linear-gradient(to bottom, #C5E1A5 0%, white 100%);
+        }
+
+        .divider {
+            grid-column: 1 / -1;
+            text-align: center;
+            font-size: 1.8em;
+            color: var(--compost-brown);
+            margin: 25px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Soil Reader</button>
+
+    <div class="container">
+        <h1>📚 Week 3 Soil Reader</h1>
+
+        <div class="book-instructions">
+            <strong>🪱 Making Your Book:</strong> Print these pages. Cut along borders.
+            Stack in number order. Staple the left edge.
+            Read together every day to learn about soil! 🟤
+        </div>
+
+        <div class="pages-grid">
+            <div class="book-page book-cover">
+                <div class="book-title">The<br>Soil</div>
+                <div class="page-illustration">🟤</div>
+                <div class="book-subtitle">A Story of Earth</div>
+                <div class="page-number">Cover</div>
+            </div>
+
+            <div class="book-page page-soil">
+                <div class="page-illustration">🟤</div>
+                <div class="page-text">The soil.</div>
+                <div class="page-number">1</div>
+            </div>
+        </div>
+
+        <div class="divider">✂️ - - - - - - - - - - - - - - - - - - - - - - - - - - - - ✂️</div>
+
+        <div class="pages-grid">
+            <div class="book-page page-wet">
+                <div class="page-illustration">💧 🟤</div>
+                <div class="page-text">Wet soil.</div>
+                <div class="page-number">2</div>
+            </div>
+
+            <div class="book-page page-dry">
+                <div class="page-illustration">☀️ 🟤</div>
+                <div class="page-text">Dry soil.</div>
+                <div class="page-number">3</div>
+            </div>
+        </div>
+
+        <div class="divider">✂️ - - - - - - - - - - - - - - - - - - - - - - - - - - - - ✂️</div>
+
+        <div class="pages-grid">
+            <div class="book-page page-compost">
+                <div class="page-illustration">🍂 🟤</div>
+                <div class="page-text">Add scraps<br>to soil.</div>
+                <div class="page-number">4</div>
+            </div>
+
+            <div class="book-page page-soil">
+                <div class="page-illustration">🪱</div>
+                <div class="page-text">Worms help!</div>
+                <div class="page-number">5</div>
+            </div>
+        </div>
+
+        <div class="divider">✂️ - - - - - - - - - - - - - - - - - - - - - - - - - - - - ✂️</div>
+
+        <div class="pages-grid">
+            <div class="book-page page-compost">
+                <div class="page-illustration">🌱 🟤</div>
+                <div class="page-text">Good soil<br>for plants!</div>
+                <div class="page-number">6</div>
+            </div>
+
+            <div class="book-page page-wet">
+                <div class="page-illustration">🌻</div>
+                <div class="page-text">Big plant!</div>
+                <div class="page-number">End</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

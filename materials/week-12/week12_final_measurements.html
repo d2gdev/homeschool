@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 12 - Final Measurements</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .measure-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid var(--emerald-green);
+            margin-top: 30px;
+        }
+
+        .measure-table th,
+        .measure-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .measure-table th {
+            background: var(--emerald-green);
+            color: white;
+        }
+
+        .summary-stats {
+            display: flex;
+            justify-content: space-around;
+            background: #E8F5E9;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+            border: 2px solid var(--emerald-green);
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-val {
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--emerald-green);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Final Measurements</button>
+    <div class="container">
+        <h1>📏 My Garden Today</h1>
+        <p style="text-align: center;">Let's measure everything one last time!</p>
+
+        <table class="measure-table">
+            <thead>
+                <tr>
+                    <th>Plant Name</th>
+                    <th>Height (cm)</th>
+                    <th>Leaves 🌿</th>
+                    <th>Healthy? 👍/👎</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Plant 1: _______</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Plant 2: _______</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Plant 3: _______</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Plant 4: _______</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Plant 5: _______</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="summary-stats">
+            <div class="stat-box">
+                <div>Total Plants</div>
+                <div class="stat-val">____</div>
+            </div>
+            <div class="stat-box">
+                <div>Tallest Plant</div>
+                <div class="stat-val">____ cm</div>
+            </div>
+            <div class="stat-box">
+                <div>Most Leaves</div>
+                <div class="stat-val">____</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

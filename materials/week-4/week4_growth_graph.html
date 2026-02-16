@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 - Sun vs Shade Graph</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .chart-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--vein-green);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .growth-chart-container {
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(to bottom, #FFFDE7 0%, #FFFDE7 20%, #E8F5E9 20%, #E8F5E9 100%);
+            border-radius: 25px;
+            border: 5px solid var(--leaf-bright);
+            position: relative;
+            box-shadow: 0 12px 45px rgba(102, 187, 106, 0.25);
+        }
+
+        .chart-title {
+            font-family: var(--font-display);
+            font-size: 2em;
+            color: var(--vein-green);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .chart-area {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 500px;
+            position: relative;
+            padding: 0 40px;
+            border-left: 4px solid var(--vein-green);
+            border-bottom: 4px solid var(--vein-green);
+        }
+
+        .y-axis {
+            position: absolute;
+            left: -60px;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: var(--vein-green);
+        }
+
+        .y-label {
+            font-size: 1.1em;
+            padding: 5px 10px;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid var(--leaf-bright);
+        }
+
+        .grid-lines {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            pointer-events: none;
+        }
+
+        .grid-line {
+            width: 100%;
+            border-top: 1px dashed rgba(102, 187, 106, 0.3);
+        }
+
+        .grid-line-major {
+            border-top: 2px solid rgba(102, 187, 106, 0.4);
+        }
+
+        .bar-column {
+            width: 35%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+        }
+
+        .bar-fill-area {
+            width: 90%;
+            height: 100%;
+            border: 5px solid var(--sun-gold);
+            border-bottom: none;
+            border-radius: 25px 25px 0 0;
+            position: relative;
+            box-shadow: inset 0 0 25px rgba(255, 235, 59, 0.2);
+            background: linear-gradient(to top, #FFF9C4 0%, #FFEB3B 100%);
+        }
+
+        .bar-fill-area::before {
+            content: '☀️';
+            position: absolute;
+            top: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.5em;
+        }
+
+        .bar-shade {
+            border-color: var(--shadow-cool);
+            background: linear-gradient(to top, #CFD8DC 0%, #B0BEC5 100%);
+        }
+
+        .bar-shade::before {
+            content: '🌑';
+        }
+
+        .x-label {
+            margin-top: 25px;
+            text-align: center;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.3em;
+            color: var(--vein-green);
+        }
+
+        .coloring-instructions {
+            margin-top: 40px;
+            padding: 25px;
+            background: linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%);
+            border-radius: 20px;
+            border: 4px solid var(--leaf-bright);
+        }
+
+        .instructions-title {
+            font-family: var(--font-display);
+            font-size: 1.6em;
+            color: white;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .instructions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .instruction-item {
+            font-family: var(--font-playful);
+            font-size: 1.1em;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Growth Graph</button>
+    <div class="container">
+        <h1>📊 Sun vs Shade — Final Comparison</h1>
+        <p class="chart-intro">Friday's Big Reveal: Color the bars to show final heights!<br>Which plant won the light
+            race? ☀️</p>
+        <div class="growth-chart-container">
+            <div class="chart-title">Sun vs Shade Growth</div>
+            <div class="chart-area">
+                <div class="y-axis">
+                    <div class="y-label">0</div>
+                    <div class="y-label">3</div>
+                    <div class="y-label">6</div>
+                    <div class="y-label">9</div>
+                    <div class="y-label">12</div>
+                    <div class="y-label">15 cm</div>
+                </div>
+                <div class="grid-lines">
+                    <div class="grid-line grid-line-major"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line grid-line-major"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line grid-line-major"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line grid-line-major"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line grid-line-major"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line grid-line-major"></div>
+                </div>
+                <div class="bar-column">
+                    <div class="bar-fill-area"></div>
+                    <div class="x-label">☀️ Sun Plant</div>
+                </div>
+                <div class="bar-column">
+                    <div class="bar-fill-area bar-shade"></div>
+                    <div class="x-label">🌑 Shade Plant</div>
+                </div>
+            </div>
+        </div>
+        <div class="coloring-instructions">
+            <div class="instructions-title">🎨 How to Complete Your Graph</div>
+            <div class="instructions-grid">
+                <div class="instruction-item"><span style="font-size: 2em;">1️⃣</span><span>Measure both plants
+                        Friday</span></div>
+                <div class="instruction-item"><span style="font-size: 2em;">2️⃣</span><span>Find height on left
+                        side</span></div>
+                <div class="instruction-item"><span style="font-size: 2em;">3️⃣</span><span>Color up to that line</span>
+                </div>
+                <div class="instruction-item"><span style="font-size: 2em;">4️⃣</span><span>Which is taller? Why?</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 - Wet vs Dry Soil</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .observation-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--soil-dark);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .comparison-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        /* Wet soil box */
+        .soil-box-wet {
+            background: linear-gradient(to bottom,
+                    #E0F2F1 0%,
+                    #B2DFDB 30%,
+                    #80CBC4 100%);
+            border: 5px solid var(--moisture-dark);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 10px 35px rgba(0, 105, 92, 0.3);
+        }
+
+        /* Dry soil box */
+        .soil-box-dry {
+            background: linear-gradient(to bottom,
+                    #FAFAFA 0%,
+                    #EFEBE9 30%,
+                    #D7CCC8 100%);
+            border: 5px solid var(--dry-crack);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 10px 35px rgba(161, 136, 127, 0.3);
+        }
+
+        .soil-title {
+            font-family: var(--font-display);
+            font-size: 2.2em;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .soil-title-wet {
+            color: var(--moisture-dark);
+        }
+
+        .soil-title-dry {
+            color: var(--soil-rich);
+        }
+
+        .drawing-area-large {
+            height: 300px;
+            background: white;
+            border: 4px dashed var(--compost-brown);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--compost-warm);
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .drawing-area-large::after {
+            content: '✏️';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 2em;
+            opacity: 0.3;
+        }
+
+        .prompt-section {
+            margin-top: 20px;
+        }
+
+        .prompt-label {
+            font-family: var(--font-display);
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--soil-dark);
+            margin-bottom: 10px;
+        }
+
+        .answer-line {
+            border-bottom: 2px solid var(--compost-brown);
+            padding: 10px 5px;
+            font-family: var(--font-handwritten);
+            font-size: 1.2em;
+            color: var(--soil-dark);
+            margin-bottom: 15px;
+        }
+
+        .circle-options {
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--soil-dark);
+            margin-top: 10px;
+        }
+
+        .conclusion-section {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #C5E1A5 0%, #AED581 100%);
+            border: 5px solid var(--organic-green);
+            border-radius: 25px;
+            padding: 35px;
+            margin-top: 30px;
+        }
+
+        .conclusion-title {
+            font-family: var(--font-display);
+            font-size: 2em;
+            color: var(--soil-dark);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .conclusion-answer {
+            background: white;
+            border: 3px dashed var(--organic-green);
+            border-radius: 15px;
+            padding: 25px;
+            font-family: var(--font-handwritten);
+            font-size: 1.5em;
+            color: var(--soil-dark);
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Soil Observation</button>
+
+    <div class="container">
+        <h1>🔬 Wet Soil vs Dry Soil</h1>
+        <p class="observation-intro">
+            Monday's Experiment: Touch, squeeze, and observe both types of soil!<br>
+            What differences do you notice? 🪱
+        </p>
+
+        <div class="comparison-container">
+            <!-- Wet Soil -->
+            <div class="soil-box-wet">
+                <div class="soil-title soil-title-wet">💧 Wet Soil</div>
+
+                <div class="drawing-area-large">
+                    Draw wet soil here
+                </div>
+
+                <div class="prompt-section">
+                    <div class="prompt-label">How does it feel?</div>
+                    <div class="answer-line">_________________________</div>
+
+                    <div class="prompt-label">Does it hold shape?</div>
+                    <div class="circle-options">
+                        ⭕ Yes &nbsp;&nbsp;&nbsp;&nbsp; ⭕ No
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dry Soil -->
+            <div class="soil-box-dry">
+                <div class="soil-title soil-title-dry">☀️ Dry Soil</div>
+
+                <div class="drawing-area-large">
+                    Draw dry soil here
+                </div>
+
+                <div class="prompt-section">
+                    <div class="prompt-label">How does it feel?</div>
+                    <div class="answer-line">_________________________</div>
+
+                    <div class="prompt-label">Does it hold shape?</div>
+                    <div class="circle-options">
+                        ⭕ Yes &nbsp;&nbsp;&nbsp;&nbsp; ⭕ No
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conclusion -->
+            <div class="conclusion-section">
+                <div class="conclusion-title">🌱 Which is better for plants?</div>
+                <div class="conclusion-answer">
+                    (Parent writes what child says)
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

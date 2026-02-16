@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 - Leaf Survey</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .split-box {
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .col-healthy {
+            flex: 1;
+            border: 3px solid var(--leaf-fresh);
+            background: #F1F8E9;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .col-damaged {
+            flex: 1;
+            border: 3px solid var(--soil-rich);
+            background: #FFF3E0;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .count-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px dashed #999;
+            background: white;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-family: var(--font-handwritten);
+        }
+
+        .drawing-space {
+            height: 150px;
+            border: 1px dotted #ccc;
+            background: white;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Leaf Survey</button>
+    <div class="container">
+        <h1>🍃 Leaf Health Check</h1>
+        <p style="text-align: center; font-family: var(--font-organic); font-size: 1.4em; margin-bottom: 20px;">
+            Are bugs eating our garden? Let's check!
+        </p>
+
+        <div class="split-box">
+            <div class="col-healthy">
+                <h3>Healthy Leaves 😊</h3>
+                <p>No bites or holes!</p>
+                <div class="drawing-space">Draw a perfect leaf</div>
+                <div class="count-circle">___</div>
+                <p style="text-align: center;">Total Count</p>
+            </div>
+
+            <div class="col-damaged">
+                <h3>Damaged Leaves 🐛</h3>
+                <p>Holes or bites!</p>
+                <div class="drawing-space">Draw the damage</div>
+                <div class="count-circle">___</div>
+                <p style="text-align: center;">Total Count</p>
+            </div>
+        </div>
+
+        <div
+            style="background: white; border: 3px dashed var(--leaf-dark); padding: 20px; margin-top: 30px; border-radius: 15px;">
+            <h3>Who ate these leaves?</h3>
+            <p style="font-family: var(--font-handwritten); font-size: 1.5em; margin-top: 10px;">
+                I think it was a: _________________________
+            </p>
+            <div style="font-size: 3em; float: right;">🤔</div>
+        </div>
+    </div>
+</body>
+
+</html>

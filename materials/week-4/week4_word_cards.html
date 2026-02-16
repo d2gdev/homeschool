@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 - Leaves & Light Words</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .subtitle {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.4em;
+            color: var(--chlorophyll);
+            margin-bottom: 40px;
+        }
+
+        .card-leaf {
+            border-color: var(--leaf-bright);
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+        }
+
+        .card-light {
+            border-color: var(--sun-gold);
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFEB3B 100%);
+        }
+
+        .card-sun {
+            border-color: var(--sun-bright);
+            background: linear-gradient(135deg, #FFEB3B 0%, #FFD54F 100%);
+        }
+
+        .card-plant {
+            border-color: var(--chlorophyll);
+            background: linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%);
+        }
+
+        .card-grow {
+            border-color: var(--stem-green);
+            background: linear-gradient(135deg, #A5D6A7 0%, #81C784 100%);
+        }
+
+        .new-badge {
+            background: linear-gradient(135deg, #FFD54F 0%, #FFC107 100%);
+            color: var(--vein-green);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-family: var(--font-display);
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-top: 10px;
+            display: inline-block;
+            box-shadow: 0 2px 8px rgba(255, 193, 7, 0.4);
+        }
+
+        .review-badge {
+            background: #E0E0E0;
+            color: #616161;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-family: var(--font-display);
+            font-size: 0.8em;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .photosynthesis-tip {
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(to right,
+                    #FFFDE7 0%,
+                    #E8F5E9 50%,
+                    #FFFDE7 100%);
+            border-radius: 25px;
+            border: 4px solid var(--leaf-bright);
+        }
+
+        .photosynthesis-tip h3 {
+            color: var(--vein-green);
+            font-family: var(--font-sunny);
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        .photosynthesis-tip p {
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--vein-green);
+            line-height: 1.7;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Leaf Words</button>
+
+    <div class="container">
+        <h1>🍃 Leaves & Light Words</h1>
+        <p class="subtitle">Week 4: How Plants Use Sunlight ~ Leaves catch the light!</p>
+
+        <div class="card-grid">
+            <!-- New Words -->
+            <div class="card card-leaf">
+                <div class="icon-large">🍃</div>
+                <div class="word-large">leaf</div>
+                <div class="new-badge">✨ NEW</div>
+            </div>
+
+            <div class="card card-light">
+                <div class="icon-large">💡</div>
+                <div class="word-large">light</div>
+                <div class="new-badge">✨ NEW</div>
+            </div>
+
+            <!-- Review Words -->
+            <div class="card card-sun">
+                <div class="icon-large">☀️</div>
+                <div class="word-large">sun</div>
+                <div class="review-badge">Review</div>
+            </div>
+
+            <div class="card card-plant">
+                <div class="icon-large">🌱</div>
+                <div class="word-large">plant</div>
+                <div class="review-badge">Review</div>
+            </div>
+
+            <div class="card card-grow">
+                <div class="icon-large">📈</div>
+                <div class="word-large">grow</div>
+                <div class="review-badge">Review</div>
+            </div>
+        </div>
+
+        <div class="photosynthesis-tip">
+            <h3>☀️ The Magic of Leaves</h3>
+            <p>
+                This week we discover how <strong>leaves</strong> work! They catch <strong>light</strong> from the
+                <strong>sun</strong>
+                and use it to help the <strong>plant</strong> <strong>grow</strong>. Leaves are like tiny solar panels!
+                Watch how plants turn toward the light and their leaves spread wide to catch every ray. 🍃☀️
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

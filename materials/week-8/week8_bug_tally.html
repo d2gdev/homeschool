@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 - Bug Tally</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tally-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid var(--soil-rich);
+        }
+
+        .tally-table th,
+        .tally-table td {
+            border-bottom: 2px dashed #D7CCC8;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .tally-table th {
+            background: var(--leaf-fresh);
+            color: white;
+            font-family: var(--font-display);
+        }
+
+        .tally-table td {
+            font-family: var(--font-handwritten);
+            font-size: 1.2em;
+            height: 60px;
+        }
+
+        .table-row-odd {
+            background: #FAFAFA;
+        }
+
+        .draw-box {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+            background: white;
+            margin: 0 auto;
+            display: inline-block;
+        }
+
+        .summary-box {
+            background: #E8F5E9;
+            border: 2px solid var(--leaf-dark);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            font-family: var(--font-display);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Tally Sheet</button>
+    <div class="container">
+        <h1>🐞 Garden Bug Count</h1>
+        <p style="text-align: center; font-family: var(--font-handwritten); font-size: 1.5em; margin-bottom: 20px;">
+            Look for bugs Monday-Thursday! Make a mark (/) each time you see one.
+        </p>
+
+        <table class="tally-table">
+            <thead>
+                <tr>
+                    <th width="20%">Bug Name</th>
+                    <th width="15%">Picture</th> <!-- Child draws example -->
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-row-odd">
+                    <td><strong>Ant</strong> 🐜</td>
+                    <td>
+                        <div class="draw-box"></div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>Beetle</strong> 🪲</td>
+                    <td>
+                        <div class="draw-box"></div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="table-row-odd">
+                    <td><strong>Worm</strong> 🪱</td>
+                    <td>
+                        <div class="draw-box"></div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>Spider</strong> 🕷️</td>
+                    <td>
+                        <div class="draw-box"></div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="table-row-odd">
+                    <td><strong>Bee/Fly</strong> 🐝</td>
+                    <td>
+                        <div class="draw-box"></div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>Other:</strong> ____</td>
+                    <td>
+                        <div class="draw-box"></div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="summary-box">
+            <h3>Who lives here the most?</h3>
+            <p style="font-size: 1.2em; margin-top: 15px;">
+                Most common bug: ________________ <br><br>
+                Total bugs found: ________________
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 - Grid Reading Strips</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .reading-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--grid-deep);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .strip-1 {
+            background: linear-gradient(135deg, #C5CAE9 0%, #9FA8DA 100%);
+            border: 4px solid var(--grid-bright);
+        }
+
+        .strip-2 {
+            background: linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 100%);
+            border: 4px solid var(--space-cyan);
+            color: var(--grid-deep);
+        }
+
+        .strip-3 {
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+            border: 4px solid var(--count-green);
+            color: var(--grid-deep);
+        }
+
+        .growth-tracker {
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(to right, #E8EAF6 0%, #C5CAE9 50%, #E8EAF6 100%);
+            border-radius: 25px;
+            border: 4px solid var(--grid-bright);
+        }
+
+        .day-boxes {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .day-box {
+            flex: 1;
+            padding: 15px;
+            background: white;
+            border: 3px dashed var(--grid-bright);
+            border-radius: 15px;
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.1em;
+            color: var(--grid-deep);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Reading Strips</button>
+    <div class="container">
+        <h1>📖 Grid Reading</h1>
+        <p class="reading-intro">Read these grid sentences together every day!<br>Learn how to organize in rows! ⊞</p>
+        <div class="strip strip-1">Plants grow in rows. ➡️</div>
+        <div class="strip strip-2">Each row has space. ↔️</div>
+        <div class="strip strip-3">We can count the plants. 🔢</div>
+        <div class="growth-tracker">
+            <h3
+                style="font-family: var(--font-display); color: var(--grid-deep); margin-bottom: 20px; text-align: center;">
+                📅 Weekly Grid Reading</h3>
+            <p
+                style="font-family: var(--font-playful); font-size: 1.2em; color: var(--grid-deep); margin-bottom: 15px; text-align: center;">
+                Check off each day you read! Build your grid skills! ⊞</p>
+            <div class="day-boxes">
+                <div class="day-box">
+                    <div style="font-size: 2em; margin-bottom: 10px;">➡️</div>Monday<br>☐
+                </div>
+                <div class="day-box">
+                    <div style="font-size: 2em; margin-bottom: 10px;">⊞</div>Tuesday<br>☐
+                </div>
+                <div class="day-box">
+                    <div style="font-size: 2em; margin-bottom: 10px;">↔️</div>Wednesday<br>☐
+                </div>
+                <div class="day-box">
+                    <div style="font-size: 2em; margin-bottom: 10px;">🔢</div>Thursday<br>☐
+                </div>
+                <div class="day-box">
+                    <div style="font-size: 2em; margin-bottom: 10px;">🌱</div>Friday<br>☐
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

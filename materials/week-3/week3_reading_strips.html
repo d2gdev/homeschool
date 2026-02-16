@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 - Soil Reading Strips</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .reading-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--soil-dark);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        /* Soil-layer themed strips */
+        .strip-1 {
+            background: linear-gradient(135deg, #B2DFDB 0%, #80CBC4 100%);
+            border: 4px solid var(--moisture-dark);
+            border-radius: 20px 60px 20px 60px;
+        }
+
+        .strip-2 {
+            background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+            border: 4px solid var(--dry-crack);
+            border-radius: 60px 20px 60px 20px;
+            color: var(--soil-dark);
+        }
+
+        .strip-3 {
+            background: linear-gradient(135deg, #A1887F 0%, #8D6E63 100%);
+            border: 4px solid var(--compost-brown);
+            border-radius: 20px 60px 20px 60px;
+        }
+
+        .strip-4 {
+            background: linear-gradient(135deg, #C5E1A5 0%, #AED581 100%);
+            border: 4px solid var(--organic-green);
+            border-radius: 60px 20px 60px 20px;
+            color: var(--soil-dark);
+        }
+
+        .strip-5 {
+            background: linear-gradient(135deg, #BCAAA4 0%, #A1887F 100%);
+            border: 4px solid var(--soil-rich);
+            border-radius: 20px 60px 20px 60px;
+        }
+
+        .strip::after {
+            content: '🪱';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8em;
+            opacity: 0.7;
+        }
+
+        .growth-tracker {
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(to right,
+                    #EFEBE9 0%,
+                    #D7CCC8 50%,
+                    #EFEBE9 100%);
+            border-radius: 25px;
+            border: 4px solid var(--compost-brown);
+        }
+
+        .growth-tracker h3 {
+            font-family: var(--font-display);
+            color: var(--soil-dark);
+            margin-bottom: 20px;
+        }
+
+        .day-boxes {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .day-box {
+            flex: 1;
+            padding: 15px;
+            background: white;
+            border: 3px dashed var(--compost-brown);
+            border-radius: 15px;
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.1em;
+            color: var(--soil-dark);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Reading Strips</button>
+
+    <div class="container">
+        <h1>📖 Soil & Compost Reading</h1>
+        <p class="reading-intro">
+            Read these soil sentences together every day!<br>
+            Learn about wet soil, dry soil, and how scraps become earth! 🍂
+        </p>
+
+        <div class="strip strip-1">
+            The soil is wet. 💧
+        </div>
+
+        <div class="strip strip-2">
+            The soil is dry. ☀️
+        </div>
+
+        <div class="strip strip-3">
+            Scraps become soil. 🍂
+        </div>
+
+        <div class="strip strip-4">
+            Wet soil holds water. 💧
+        </div>
+
+        <div class="strip strip-5">
+            Plants need good soil. 🌱
+        </div>
+
+        <div class="growth-tracker">
+            <h3>📅 Weekly Soil Reading</h3>
+            <p
+                style="font-family: var(--font-playful); font-size: 1.2em; color: var(--soil-dark); margin-bottom: 15px;">
+                Check off each day you read! Watch your understanding of soil grow! 🪱
+            </p>
+            <div class="day-boxes">
+                <div class="day-box">
+                    <div style="font-size: 2em; margin-bottom: 10px;">🟤</div>
+                    Monday<br>☐
+                </div>
+                <div class="day-box">
+                    <div style="font-size: 2em; margin-bottom: 10px;">💧</div>
+                    Tuesday<br>☐
+                </div>
+                <div class="day-box">
+                    <div style="font-size: 2em; margin-bottom: 10px;">🍂</div>
+                    Wednesday<br>☐
+                </div>
+                <div class="day-box">
+                    <div style="font-size: 2em; margin-bottom: 10px;">🪱</div>
+                    Thursday<br>☐
+                </div>
+                <div class="day-box">
+                    <div style="font-size: 2em; margin-bottom: 10px;">🌱</div>
+                    Friday<br>☐
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

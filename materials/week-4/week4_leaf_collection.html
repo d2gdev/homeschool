@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 - Leaf Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .collection-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--vein-green);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .leaf-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .leaf-box {
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+            border: 5px solid var(--leaf-bright);
+            border-radius: 25px;
+            padding: 25px;
+            min-height: 280px;
+            box-shadow: 0 8px 30px rgba(102, 187, 106, 0.25);
+        }
+
+        .leaf-number {
+            font-family: var(--font-display);
+            font-size: 1.5em;
+            font-weight: 600;
+            color: white;
+            background: var(--leaf-bright);
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .tape-area {
+            height: 150px;
+            background: white;
+            border: 3px dashed var(--vein-green);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-playful);
+            font-size: 1.1em;
+            color: var(--chlorophyll);
+            margin: 15px 0;
+        }
+
+        .measurement-line {
+            font-family: var(--font-handwritten);
+            font-size: 1.1em;
+            color: var(--vein-green);
+            margin: 10px 0;
+            border-bottom: 2px solid var(--leaf-bright);
+            padding: 5px 0;
+        }
+
+        .texture-options {
+            font-family: var(--font-playful);
+            font-size: 0.95em;
+            color: var(--vein-green);
+            margin-top: 8px;
+        }
+
+        .summary-section {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFEB3B 100%);
+            border: 5px solid var(--sun-gold);
+            border-radius: 25px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        .summary-text {
+            font-family: var(--font-display);
+            font-size: 1.4em;
+            color: var(--vein-green);
+            text-align: center;
+        }
+
+        .answer-blank {
+            border-bottom: 3px solid var(--vein-green);
+            display: inline-block;
+            min-width: 80px;
+            padding: 5px 10px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Leaf Collection</button>
+    <div class="container">
+        <h1>🍃 My Leaf Collection</h1>
+        <p class="collection-intro">Monday's Adventure: Collect 6 different leaves!<br>Tape or draw them, then measure
+            and describe each one 🍂</p>
+        <div class="leaf-grid">
+            <div class="leaf-box">
+                <div class="leaf-number">Leaf 1</div>
+                <div class="tape-area">Tape leaf here<br>or draw it 🍃</div>
+                <div class="measurement-line">Length: _____ cm</div>
+                <div class="texture-options">⭕ smooth ⭕ rough ⭕ thick ⭕ thin</div>
+            </div>
+            <div class="leaf-box">
+                <div class="leaf-number">Leaf 2</div>
+                <div class="tape-area">Tape leaf here<br>or draw it 🍃</div>
+                <div class="measurement-line">Length: _____ cm</div>
+                <div class="texture-options">⭕ smooth ⭕ rough ⭕ thick ⭕ thin</div>
+            </div>
+            <div class="leaf-box">
+                <div class="leaf-number">Leaf 3</div>
+                <div class="tape-area">Tape leaf here<br>or draw it 🍃</div>
+                <div class="measurement-line">Length: _____ cm</div>
+                <div class="texture-options">⭕ smooth ⭕ rough ⭕ thick ⭕ thin</div>
+            </div>
+            <div class="leaf-box">
+                <div class="leaf-number">Leaf 4</div>
+                <div class="tape-area">Tape leaf here<br>or draw it 🍃</div>
+                <div class="measurement-line">Length: _____ cm</div>
+                <div class="texture-options">⭕ smooth ⭕ rough ⭕ thick ⭕ thin</div>
+            </div>
+            <div class="leaf-box">
+                <div class="leaf-number">Leaf 5</div>
+                <div class="tape-area">Tape leaf here<br>or draw it 🍃</div>
+                <div class="measurement-line">Length: _____ cm</div>
+                <div class="texture-options">⭕ smooth ⭕ rough ⭕ thick ⭕ thin</div>
+            </div>
+            <div class="leaf-box">
+                <div class="leaf-number">Leaf 6</div>
+                <div class="tape-area">Tape leaf here<br>or draw it 🍃</div>
+                <div class="measurement-line">Length: _____ cm</div>
+                <div class="texture-options">⭕ smooth ⭕ rough ⭕ thick ⭕ thin</div>
+            </div>
+            <div class="summary-section">
+                <div class="summary-text">The biggest leaf is <span class="answer-blank">____</span> cm.</div>
+                <div class="summary-text" style="margin-top: 15px;">The smallest leaf is <span
+                        class="answer-blank">____</span> cm.</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

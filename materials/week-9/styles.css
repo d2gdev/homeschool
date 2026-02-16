@@ -1,0 +1,227 @@
+/* Week 9: Seeds & Groups - Sorting, Counting, & Saving Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Coming+Soon&family=Varela+Round&display=swap');
+
+:root {
+    /* Seed & Sorting Color Palette */
+    --seed-brown-dark: #5D4037;
+    --seed-brown-light: #8D6E63;
+    --seed-tan: #D7CCC8;
+
+    --packet-paper: #F5F5F5;
+    --packet-border: #9E9E9E;
+
+    --group-red: #EF5350;
+    --group-blue: #42A5F5;
+    --group-yellow: #FFEE58;
+    --group-green: #66BB6A;
+
+    --sprout-lim: #CDCDC0;
+    /* Subtle background */
+
+    /* Typography */
+    --font-display: 'Fredoka', sans-serif;
+    --font-handwritten: 'Coming Soon', cursive;
+    --font-round: 'Varela Round', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-display);
+    background: linear-gradient(to bottom,
+            #FFF8E1 0%,
+            /* Light warm background */
+            #EFEBE9 100%);
+    /* Paper-like */
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--seed-brown-dark);
+}
+
+/* Sorting Mat Style Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px;
+    border-radius: 40px;
+    border: 8px solid var(--seed-brown-light);
+    box-shadow:
+        0 20px 50px rgba(93, 64, 55, 0.2),
+        inset 0 0 60px rgba(0, 0, 0, 0.03);
+    /* Subtle inner shadow */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Seed pattern header */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: radial-gradient(#8D6E63 20%, transparent 20%);
+    background-size: 15px 15px;
+    opacity: 0.3;
+    border-bottom: 2px solid var(--seed-brown-light);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-display);
+    color: var(--seed-brown-dark);
+    text-align: center;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Seed Sorting Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.card {
+    background: white;
+    border: 3px solid var(--seed-brown-light);
+    border-radius: 50%;
+    /* Circular cards like seeds/groups */
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.word-large {
+    font-family: var(--font-display);
+    font-size: 2.2em;
+    font-weight: 600;
+    color: var(--seed-brown-dark);
+    margin-top: 5px;
+}
+
+.icon-large {
+    font-size: 4em;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* Dashed grouping circles */
+.group-circle {
+    border: 4px dashed var(--seed-brown-light);
+    border-radius: 50%;
+    margin: 20px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Reading Strips ("The Packets") */
+.strip {
+    background: white;
+    padding: 20px 40px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-family: var(--font-handwritten);
+    font-size: 2em;
+    text-align: center;
+    color: var(--seed-brown-dark);
+    border: 2px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Flap decoration for packet look */
+.strip::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #ccc;
+}
+
+/* Counting rows */
+.count-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin: 15px 0;
+    background: #FAFAFA;
+    border-radius: 15px;
+    border: 1px dashed var(--seed-brown-light);
+}
+
+/* Seed illustration placeholder */
+.seed-shape {
+    width: 20px;
+    height: 30px;
+    background: var(--seed-brown-dark);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    display: inline-block;
+    margin: 2px;
+}
+
+/* Print button */
+.print-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 15px 40px;
+    background: var(--group-blue);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-display);
+    font-size: 1.3em;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        border: 2px solid #ccc;
+    }
+
+    .print-btn {
+        display: none;
+    }
+
+    .card {
+        page-break-inside: avoid;
+    }
+}

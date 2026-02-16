@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Seed - Underground Reader</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .book-instructions {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--soil-deep);
+            margin: 30px 0;
+            padding: 25px;
+            background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+            border-radius: 20px;
+            border: 4px solid var(--seed-core);
+        }
+
+        .pages-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        /* Underground-themed book pages */
+        .book-page {
+            background: white;
+            border: 6px solid var(--seed-core);
+            border-radius: 25px;
+            padding: 40px;
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 35px rgba(121, 85, 72, 0.25);
+            page-break-inside: avoid;
+        }
+
+        /* Root network footer */
+        .book-page::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 12px;
+            background: repeating-linear-gradient(90deg,
+                    var(--root-cream) 0px,
+                    var(--root-cream) 8px,
+                    var(--seed-core) 8px,
+                    var(--seed-core) 16px);
+            border-radius: 0 0 20px 20px;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 25px;
+            right: 25px;
+            font-family: var(--font-display);
+            font-size: 1.2em;
+            color: white;
+            background: var(--seed-core);
+            padding: 8px 20px;
+            border-radius: 25px;
+            box-shadow: 0 3px 10px rgba(121, 85, 72, 0.3);
+        }
+
+        .book-cover {
+            background: linear-gradient(to bottom,
+                    #E0F2F1 0%,
+                    #EFEBE9 40%,
+                    #D7CCC8 100%);
+            border-color: var(--clay-deep);
+        }
+
+        .book-title {
+            font-family: var(--font-display);
+            font-size: 3.5em;
+            font-weight: 600;
+            color: var(--soil-deep);
+            margin: 25px 0;
+            text-shadow: 3px 3px 0 rgba(188, 170, 164, 0.3);
+        }
+
+        .book-subtitle {
+            font-family: var(--font-playful);
+            font-size: 1.5em;
+            color: var(--clay-deep);
+            margin-top: 20px;
+        }
+
+        .page-illustration {
+            font-size: 7em;
+            margin: 35px 0;
+            filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.15));
+        }
+
+        .page-text {
+            font-family: var(--font-handwritten);
+            font-size: 2.8em;
+            color: var(--soil-deep);
+            line-height: 1.5;
+            margin: 25px 0;
+        }
+
+        /* Themed page backgrounds */
+        .page-seed {
+            background: linear-gradient(to bottom, #EFEBE9 0%, white 100%);
+        }
+
+        .page-soil {
+            background: linear-gradient(to bottom, #D7CCC8 0%, white 100%);
+        }
+
+        .page-water {
+            background: linear-gradient(to bottom, #E0F2F1 0%, white 100%);
+        }
+
+        .page-root {
+            background: linear-gradient(to bottom, #BCAAA4 0%, white 100%);
+        }
+
+        .page-sprout {
+            background: linear-gradient(to bottom, #C8E6C9 0%, white 100%);
+        }
+
+        .divider {
+            grid-column: 1 / -1;
+            text-align: center;
+            font-size: 1.8em;
+            color: var(--seed-core);
+            margin: 25px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Underground Reader</button>
+
+    <div class="container">
+        <h1>📚 Week 2 Underground Reader</h1>
+
+        <div class="book-instructions">
+            <strong>🌰 Making Your Book:</strong> Print these pages. Cut along the borders.
+            Stack in number order. Staple the left edge.
+            Read together every day to watch the seed's journey! 🥕
+        </div>
+
+        <div class="pages-grid">
+            <!-- Cover -->
+            <div class="book-page book-cover">
+                <div class="book-title">The<br>Seed</div>
+                <div class="page-illustration">🌰</div>
+                <div class="book-subtitle">An Underground Story</div>
+                <div class="page-number">Cover</div>
+            </div>
+
+            <!-- Page 1 -->
+            <div class="book-page page-seed">
+                <div class="page-illustration">🌰</div>
+                <div class="page-text">A seed.</div>
+                <div class="page-number">1</div>
+            </div>
+        </div>
+
+        <div class="divider">✂️ - - - - - - - - - - - - - - - - - - - - - - - - - - - - ✂️</div>
+
+        <div class="pages-grid">
+            <!-- Page 2 -->
+            <div class="book-page page-soil">
+                <div class="page-illustration">🌰 🟤</div>
+                <div class="page-text">The seed<br>is in soil.</div>
+                <div class="page-number">2</div>
+            </div>
+
+            <!-- Page 3 -->
+            <div class="book-page page-water">
+                <div class="page-illustration">💧 🌰</div>
+                <div class="page-text">Wet the seed.</div>
+                <div class="page-number">3</div>
+            </div>
+        </div>
+
+        <div class="divider">✂️ - - - - - - - - - - - - - - - - - - - - - - - - - - - - ✂️</div>
+
+        <div class="pages-grid">
+            <!-- Page 4 -->
+            <div class="book-page page-water">
+                <div class="page-illustration">💧 ✅</div>
+                <div class="page-text">The seed<br>is wet.</div>
+                <div class="page-number">4</div>
+            </div>
+
+            <!-- Page 5 -->
+            <div class="book-page page-root">
+                <div class="page-illustration">🌰 ⬇️</div>
+                <div class="page-text">A root!</div>
+                <div class="page-number">5</div>
+            </div>
+        </div>
+
+        <div class="divider">✂️ - - - - - - - - - - - - - - - - - - - - - - - - - - - - ✂️</div>
+
+        <div class="pages-grid">
+            <!-- Page 6 -->
+            <div class="book-page page-root">
+                <div class="page-illustration">🥕 ⬇️</div>
+                <div class="page-text">The root<br>is down.</div>
+                <div class="page-number">6</div>
+            </div>
+
+            <!-- Page 7 -->
+            <div class="book-page page-sprout">
+                <div class="page-illustration">🌱 ⬆️</div>
+                <div class="page-text">Big plant!</div>
+                <div class="page-number">7</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

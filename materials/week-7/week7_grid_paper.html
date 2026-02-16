@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 - Grid Paper</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .grid-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--grid-deep);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .grid-paper {
+            width: 100%;
+            height: 600px;
+            background:
+                repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(92, 107, 192, 0.3) 39px, rgba(92, 107, 192, 0.3) 40px),
+                repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(92, 107, 192, 0.3) 39px, rgba(92, 107, 192, 0.3) 40px),
+                white;
+            border: 5px solid var(--grid-bright);
+            border-radius: 20px;
+            margin: 30px 0;
+            box-shadow: 0 12px 45px rgba(92, 107, 192, 0.3);
+            position: relative;
+        }
+
+        .grid-paper::before {
+            content: 'Draw your garden rows here! ⊞';
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--grid-bright);
+            background: white;
+            padding: 10px 25px;
+            border-radius: 20px;
+            border: 2px solid var(--grid-bright);
+        }
+
+        .daily-tasks {
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #C5CAE9 0%, #9FA8DA 100%);
+            border: 5px solid var(--grid-bright);
+            border-radius: 25px;
+        }
+
+        .task-title {
+            font-family: var(--font-display);
+            font-size: 1.8em;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .task-list {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .task-item {
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--grid-deep);
+            margin: 15px 0;
+            padding: 15px;
+            background: #F5F5F5;
+            border-left: 5px solid var(--grid-bright);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Grid Paper (Make 5 copies)</button>
+    <div class="container">
+        <h1>⊞ Garden Grid Paper</h1>
+        <p class="grid-intro">Use this grid all week to plan your garden rows!<br>Each square = 1 plant space 🌱</p>
+        <div class="grid-paper"></div>
+        <div class="daily-tasks">
+            <div class="task-title">📅 Weekly Grid Tasks</div>
+            <div class="task-list">
+                <div class="task-item"><strong>Monday:</strong> Draw 2 rows of 4 plants</div>
+                <div class="task-item"><strong>Tuesday:</strong> Draw rows with spacing between them</div>
+                <div class="task-item"><strong>Wednesday:</strong> Add more rows to your design</div>
+                <div class="task-item"><strong>Thursday:</strong> Compare 2×4 vs 4×2 layouts</div>
+                <div class="task-item"><strong>Friday:</strong> Draw your final garden design!</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

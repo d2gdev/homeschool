@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 - Seed Journal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .draw-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 300px;
+            margin: 20px 0;
+            border: 2px solid var(--seed-brown-light);
+        }
+
+        .draw-cell {
+            border: 1px dotted #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Seed Journal (5 copies)</button>
+    <div class="container">
+        <h1>📔 My Seed Journal</h1>
+        <div style="text-align: right; margin-bottom: 20px;">
+            Week: <strong>9</strong> &nbsp;&nbsp; Day: _________
+        </div>
+
+        <div class="draw-grid">
+            <div class="draw-cell">Draw 1 seed</div>
+            <div class="draw-cell">Draw a group</div>
+            <div class="draw-cell">Draw a big seed</div>
+            <div class="draw-cell">Draw a small seed</div>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <h3>I counted this many seeds:</h3>
+            <div style="border-bottom: 2px dashed #999; height: 50px; width: 100px; margin: 0 auto;"></div>
+        </div>
+
+        <div style="margin-top: 30px; padding: 20px; background: #EFEBE9; border-radius: 15px;">
+            <strong>Word of the Day:</strong> (Circle one)
+            <div style="font-size: 1.5em; margin-top: 10px; text-align: center;">
+                seed &nbsp;&nbsp; group &nbsp;&nbsp; count &nbsp;&nbsp; save &nbsp;&nbsp; plant
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

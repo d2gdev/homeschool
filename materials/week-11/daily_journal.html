@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 11 - Weather Journal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .journal-frame {
+            border: 4px solid #B0BEC5;
+            border-radius: 15px;
+            height: 350px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #E3F2FD 60%, #AED581 60%);
+        }
+
+        .window-pane {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 10px solid white;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Weather Journal (5 copies)</button>
+    <div class="container">
+        <h1>📔 My Weather Journal</h1>
+        <div style="text-align: right; margin-bottom: 20px;">
+            Week: <strong>11</strong> &nbsp;&nbsp; Day: _________
+        </div>
+
+        <div class="journal-frame">
+            <div class="window-pane"></div>
+            <p style="text-align: center; color: #546E7A; padding-top: 20px;">Draw the weather outside your window!</p>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <h3>Today the weather is:</h3>
+            <div style="border-bottom: 2px dashed #999; height: 40px; margin-top: 20px;"></div>
+        </div>
+
+        <div style="margin-top: 30px; padding: 20px; background: #FFF9C4; border-radius: 15px;">
+            <strong>Word of the Day:</strong> (Circle one)
+            <div style="font-size: 1.5em; margin-top: 10px; text-align: center;">
+                sun &nbsp;&nbsp; rain &nbsp;&nbsp; hot &nbsp;&nbsp; cold &nbsp;&nbsp; weather
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

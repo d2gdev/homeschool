@@ -1,0 +1,349 @@
+/* Week 3: Soil & Compost - Earth Layers & Decomposition Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Architects+Daughter&family=Patrick+Hand&family=Caveat:wght@600&display=swap');
+
+:root {
+    /* Rich Soil & Compost Color Palette */
+    --soil-darkest: #1B0000;
+    --soil-dark: #3E2723;
+    --soil-rich: #5D4037;
+    --soil-medium: #6D4C41;
+    --soil-light: #8D6E63;
+
+    --compost-deep: #4E342E;
+    --compost-brown: #795548;
+    --compost-warm: #A1887F;
+    --compost-tan: #BCAAA4;
+
+    --earth-layer-top: #8D6E63;
+    --earth-layer-mid: #6D4C41;
+    --earth-layer-deep: #4E342E;
+
+    --organic-green: #689F38;
+    --leaf-decay: #7CB342;
+    --fresh-scrap: #9CCC65;
+    --living-soil: #AED581;
+
+    --moisture-dark: #00695C;
+    --moisture-medium: #00897B;
+    --water-soil: #26A69A;
+
+    --dry-crack: #D7CCC8;
+    --dry-dust: #EFEBE9;
+
+    /* Typography */
+    --font-display: 'Fredoka', sans-serif;
+    --font-handwritten: 'Patrick Hand', cursive;
+    --font-playful: 'Architects Daughter', cursive;
+    --font-earthy: 'Caveat', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-display);
+    background: linear-gradient(to bottom,
+            #D7CCC8 0%,
+            #A1887F 30%,
+            #8D6E63 60%,
+            #6D4C41 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--soil-dark);
+}
+
+/* Layered earth container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom,
+            #FAFAFA 0%,
+            #EFEBE9 20%,
+            #D7CCC8 100%);
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow:
+        0 20px 60px rgba(62, 39, 35, 0.3),
+        inset 0 -8px 30px rgba(141, 110, 99, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Soil strata decorative border */
+.container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(to right,
+            var(--soil-dark) 0%,
+            var(--soil-rich) 25%,
+            var(--compost-brown) 50%,
+            var(--soil-rich) 75%,
+            var(--soil-dark) 100%);
+}
+
+/* Compost texture overlay */
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: repeating-linear-gradient(90deg,
+            var(--organic-green) 0px,
+            var(--organic-green) 3px,
+            var(--compost-brown) 3px,
+            var(--compost-brown) 6px,
+            var(--soil-rich) 6px,
+            var(--soil-rich) 9px);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-display);
+    color: var(--soil-dark);
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 0 rgba(161, 136, 127, 0.3);
+}
+
+/* Compost pile shaped cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.card {
+    background: linear-gradient(135deg, #D7CCC8 0%, #BCAAA4 100%);
+    border: 4px solid var(--compost-brown);
+    border-radius: 40% 40% 15px 15px;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow:
+        0 8px 25px rgba(121, 85, 72, 0.25),
+        inset 0 4px 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Decomposition layers at bottom */
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(to bottom,
+            transparent 0%,
+            var(--compost-brown) 50%,
+            var(--soil-dark) 100%);
+    border-radius: 0 0 12px 12px;
+}
+
+.word-large {
+    font-family: var(--font-display);
+    font-size: 2.8em;
+    font-weight: 600;
+    color: var(--soil-dark);
+    margin: 15px 0;
+    letter-spacing: 1px;
+}
+
+.icon-large {
+    font-size: 4.5em;
+    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.2));
+}
+
+/* Compost-layer reading strips */
+.strip {
+    background: linear-gradient(135deg, #A1887F 0%, #8D6E63 100%);
+    padding: 25px 40px;
+    margin: 20px 0;
+    border-radius: 20px 60px 20px 60px;
+    font-family: var(--font-earthy);
+    font-size: 2.2em;
+    text-align: center;
+    color: white;
+    box-shadow:
+        0 8px 30px rgba(121, 85, 72, 0.3),
+        inset 0 3px 10px rgba(255, 255, 255, 0.3);
+    position: relative;
+    border: 3px solid var(--soil-dark);
+}
+
+.strip::before {
+    content: '🍂';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+/* Soil observation tables */
+.worksheet-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 30px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(121, 85, 72, 0.25);
+}
+
+.worksheet-table th {
+    background: linear-gradient(135deg, var(--compost-brown) 0%, var(--soil-rich) 100%);
+    color: white;
+    padding: 20px;
+    font-family: var(--font-display);
+    font-size: 1.3em;
+    font-weight: 600;
+    text-align: left;
+}
+
+.worksheet-table td {
+    padding: 20px;
+    border-bottom: 2px solid #EFEBE9;
+    background: white;
+    font-family: var(--font-playful);
+    font-size: 1.1em;
+}
+
+.worksheet-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Soil cross-section drawing boxes */
+.drawing-box {
+    height: 140px;
+    background: linear-gradient(to bottom,
+            #EFEBE9 0%,
+            #D7CCC8 25%,
+            #BCAAA4 50%,
+            #A1887F 75%,
+            #8D6E63 100%);
+    border: 3px dashed var(--compost-brown);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--soil-dark);
+    font-family: var(--font-playful);
+    font-size: 1.2em;
+    position: relative;
+    margin: 10px 0;
+}
+
+.drawing-box::after {
+    content: '🪱';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    opacity: 0.4;
+}
+
+/* Compost bin labels */
+.label-box {
+    background: linear-gradient(135deg, #A1887F 0%, #8D6E63 100%);
+    border: 5px solid var(--compost-brown);
+    border-radius: 20px;
+    padding: 35px;
+    margin: 25px 0;
+    text-align: center;
+    box-shadow:
+        0 12px 40px rgba(121, 85, 72, 0.3),
+        inset 0 4px 20px rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.trace-text {
+    font-family: var(--font-display);
+    font-size: 2.8em;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 3px;
+    text-transform: lowercase;
+    position: relative;
+    display: inline-block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Print button */
+.print-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, var(--compost-brown) 0%, var(--soil-rich) 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-display);
+    font-size: 1.3em;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 30px rgba(121, 85, 72, 0.4);
+    transition: all 0.3s ease;
+}
+
+.print-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(121, 85, 72, 0.5);
+}
+
+/* Print optimization */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .print-btn {
+        display: none;
+    }
+
+    .card {
+        page-break-inside: avoid;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+}

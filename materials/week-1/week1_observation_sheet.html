@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 - Plant Observation Journal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .journal-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .journal-subtitle {
+            font-family: var(--font-playful);
+            font-size: 1.4em;
+            color: var(--earth-warm);
+            margin-top: 10px;
+        }
+
+        /* Garden journal aesthetic */
+        .observation-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 30px 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(46, 125, 50, 0.15);
+        }
+
+        .observation-table th {
+            background: linear-gradient(135deg, var(--leaf-vibrant) 0%, var(--stem-fresh) 100%);
+            color: white;
+            padding: 20px 15px;
+            font-family: var(--font-display);
+            font-size: 1.2em;
+            font-weight: 600;
+            text-align: center;
+            border-right: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .observation-table th:last-child {
+            border-right: none;
+        }
+
+        .observation-table td {
+            padding: 15px;
+            border-bottom: 2px solid #E8F5E9;
+            border-right: 2px solid #E8F5E9;
+            background: white;
+            vertical-align: top;
+        }
+
+        .observation-table td:last-child {
+            border-right: none;
+        }
+
+        .observation-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .day-label {
+            font-family: var(--font-display);
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--leaf-vibrant);
+            text-align: center;
+            padding: 15px !important;
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%) !important;
+        }
+
+        /* Enhanced drawing boxes with garden soil layers */
+        .plant-drawing-box {
+            height: 150px;
+            background: linear-gradient(to bottom,
+                    #E3F2FD 0%,
+                    #E3F2FD 30%,
+                    #FFF9C4 30%,
+                    #FFF9C4 60%,
+                    #EFEBE9 60%,
+                    #EFEBE9 100%);
+            border: 3px solid var(--earth-warm);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--clay-terracotta);
+            font-family: var(--font-playful);
+            font-size: 1em;
+            position: relative;
+            margin: 5px 0;
+        }
+
+        .plant-drawing-box::before {
+            content: '✏️';
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 1.2em;
+            opacity: 0.3;
+        }
+
+        .measurement-line {
+            font-family: var(--font-handwritten);
+            font-size: 1.2em;
+            color: var(--soil-deep);
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        .experiment-legend {
+            margin-top: 40px;
+            padding: 25px;
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
+            border-radius: 20px;
+            border: 4px solid var(--sun-golden);
+        }
+
+        .legend-items {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-playful);
+            font-size: 1.1em;
+            color: var(--soil-deep);
+        }
+
+        .legend-icon {
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Observation Journal</button>
+
+    <div class="container">
+        <div class="journal-header">
+            <h1>🌱 Our Plant Experiment Journal</h1>
+            <p class="journal-subtitle">Week 1: Watching Plants Grow with Water & Sun</p>
+        </div>
+
+        <table class="observation-table">
+            <thead>
+                <tr>
+                    <th style="width: 12%;">Day</th>
+                    <th style="width: 29%;">Plant A<br><small style="font-size: 0.8em;">💧 + ☀️</small></th>
+                    <th style="width: 29%;">Plant B<br><small style="font-size: 0.8em;">🚫 💧</small></th>
+                    <th style="width: 29%;">Plant C<br><small style="font-size: 0.8em;">☁️ Shade</small></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Monday -->
+                <tr>
+                    <td class="day-label">Mon</td>
+                    <td>
+                        <div class="plant-drawing-box">
+                            <div>Draw Plant A</div>
+                            <div style="font-size: 0.8em; opacity: 0.6;">Sky → Sun → Soil</div>
+                        </div>
+                        <div class="measurement-line">Height: _____ cm</div>
+                    </td>
+                    <td>
+                        <div class="plant-drawing-box">
+                            <div>Draw Plant B</div>
+                            <div style="font-size: 0.8em; opacity: 0.6;">Sky → Sun → Soil</div>
+                        </div>
+                        <div class="measurement-line">Height: _____ cm</div>
+                    </td>
+                    <td>
+                        <div class="plant-drawing-box">
+                            <div>Draw Plant C</div>
+                            <div style="font-size: 0.8em; opacity: 0.6;">Sky → Sun → Soil</div>
+                        </div>
+                        <div class="measurement-line">Height: _____ cm</div>
+                    </td>
+                </tr>
+
+                <!-- Tuesday -->
+                <tr>
+                    <td class="day-label">Tue</td>
+                    <td>
+                        <div class="plant-drawing-box">
+                            <div>Draw Plant A</div>
+                        </div>
+                        <div class="measurement-line">Height: _____ cm</div>
+                    </td>
+                    <td>
+                        <div class="plant-drawing-box">
+                            <div>Draw Plant B</div>
+                        </div>
+                        <div class="measurement-line">Height: _____ cm</div>
+                    </td>
+                    <td>
+                        <div class="plant-drawing-box">
+                            <div>Draw Plant C</div>
+                        </div>
+                        <div class="measurement-line">Height: _____ cm</div>
+                    </td>
+                </tr>
+
+                <!-- Wednesday -->
+                <tr>
+                    <td class="day-label">Wed</td>
+                    <td>
+                        <div class="plant-drawing-box">
+                            <div>Draw Plant A</div>
+                        </div>
+                        <div class="measurement-line">Height: _____ cm</div>
+                    </td>
+                    <td>
+                        <div class="plant-drawing-box">
+                            <div>Draw Plant B</div>
+                        </div>
+                        <div class="measurement-line">Height: _____ cm</div>
+                    </td>
+                    <td>
+                        <div class="plant-drawing-box">
+                            <div>Draw Plant C</div>
+                        </div>
+                        <div class="measurement-line">Height: _____ cm</div>
+                    </td>
+                </tr>
+
+                <!-- Thursday -->
+                <tr>
+                    <td class="day-label">Thu</td>
+                    <td>
+                        <div class="plant-drawing-box">
+                            <div>Draw Plant A</div>
+                        </div>
+                        <div class="measurement-line">Height: _____ cm</div>
+                    </td>
+                    <td>
+                        <div class="plant-drawing-box">
+                            <div>Draw Plant B</div>
+                        </div>
+                        <div class="measurement-line">Height: _____ cm</div>
+                    </td>
+                    <td>
+                        <div class="plant-drawing-box">
+                            <div>Draw Plant C</div>
+                        </div>
+                        <div class="measurement-line">Height: _____ cm</div>
+                    </td>
+                </tr>
+
+                <!-- Friday -->
+                <tr>
+                    <td class="day-label">Fri</td>
+                    <td>
+                        <div class="plant-drawing-box">
+                            <div>Draw Plant A</div>
+                        </div>
+                        <div class="measurement-line">Height: _____ cm</div>
+                    </td>
+                    <td>
+                        <div class="plant-drawing-box">
+                            <div>Draw Plant B</div>
+                        </div>
+                        <div class="measurement-line">Height: _____ cm</div>
+                    </td>
+                    <td>
+                        <div class="plant-drawing-box">
+                            <div>Draw Plant C</div>
+                        </div>
+                        <div class="measurement-line">Height: _____ cm</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="experiment-legend">
+            <h3
+                style="font-family: var(--font-display); color: var(--soil-deep); text-align: center; margin-bottom: 15px;">
+                🔬 Our Experiment Key
+            </h3>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <span class="legend-icon">💧</span>
+                    <span>Water</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-icon">☀️</span>
+                    <span>Sunlight</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-icon">☁️</span>
+                    <span>Shade</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-icon">📏</span>
+                    <span>Measure in cm</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

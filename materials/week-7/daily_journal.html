@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 - Daily Grid Journal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .journal-page {
+            background: white;
+            border: 6px solid var(--grid-bright);
+            border-radius: 25px;
+            padding: 40px;
+            min-height: 900px;
+            position: relative;
+            box-shadow: 0 12px 45px rgba(92, 107, 192, 0.3);
+        }
+
+        .journal-page::before,
+        .journal-page::after {
+            content: '⊞';
+            position: absolute;
+            font-size: 3em;
+            opacity: 0.2;
+        }
+
+        .journal-page::before {
+            top: 20px;
+            left: 20px;
+        }
+
+        .journal-page::after {
+            bottom: 20px;
+            right: 20px;
+            content: '🔢';
+        }
+
+        .date-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--grid-bright);
+            margin-bottom: 30px;
+        }
+
+        .date-field {
+            font-family: var(--font-handwritten);
+            font-size: 1.5em;
+            color: var(--grid-deep);
+        }
+
+        .date-input {
+            border-bottom: 2px solid var(--grid-bright);
+            padding: 5px 15px;
+            min-width: 150px;
+            display: inline-block;
+        }
+
+        .observation-drawing {
+            height: 400px;
+            background:
+                repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(92, 107, 192, 0.2) 39px, rgba(92, 107, 192, 0.2) 40px),
+                repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(92, 107, 192, 0.2) 39px, rgba(92, 107, 192, 0.2) 40px),
+                #E8EAF6;
+            border: 4px dashed var(--grid-bright);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .observation-drawing::before {
+            content: 'Draw your garden rows (use the grid!)';
+            font-family: var(--font-playful);
+            font-size: 1.4em;
+            color: var(--grid-medium);
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+        }
+
+        .writing-section {
+            margin-top: 40px;
+        }
+
+        .prompt-line {
+            margin: 25px 0;
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+        }
+
+        .prompt-label {
+            font-family: var(--font-display);
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--grid-bright);
+            min-width: 180px;
+            flex-shrink: 0;
+        }
+
+        .prompt-answer {
+            flex-grow: 1;
+            border-bottom: 2px solid var(--grid-bright);
+            padding: 10px 0;
+            font-family: var(--font-handwritten);
+            font-size: 1.2em;
+            color: var(--grid-deep);
+        }
+
+        .word-highlight-box {
+            margin-top: 40px;
+            padding: 25px;
+            background: linear-gradient(135deg, #FFCC80 0%, #FFB74D 100%);
+            border: 4px solid var(--row-orange);
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .word-highlight-box .prompt-label {
+            display: block;
+            margin-bottom: 15px;
+            color: var(--grid-deep);
+        }
+
+        .word-box {
+            background: white;
+            border: 3px dashed var(--row-orange);
+            border-radius: 15px;
+            padding: 20px;
+            font-family: var(--font-display);
+            font-size: 2.5em;
+            font-weight: 600;
+            color: var(--grid-deep);
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mood-tracker {
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--grid-deep);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .mood-tracker span {
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Journal (Make 5 copies for Week 7)</button>
+    <div class="container">
+        <div class="journal-page">
+            <div class="date-header">
+                <div class="date-field">Week <span class="date-input">__7__</span></div>
+                <div class="date-field">Day <span class="date-input">_____</span></div>
+                <div class="date-field">Date <span class="date-input">_______________</span></div>
+            </div>
+            <div class="observation-drawing"></div>
+            <div class="writing-section">
+                <div class="prompt-line"><span class="prompt-label">Rows today:</span><span
+                        class="prompt-answer">_____</span></div>
+                <div class="prompt-line"><span class="prompt-label">I noticed:</span><span
+                        class="prompt-answer">_____________________________________________</span></div>
+                <div class="prompt-line"><span class="prompt-label"></span><span
+                        class="prompt-answer">_____________________________________________</span></div>
+                <div class="prompt-line"><span class="prompt-label"></span><span
+                        class="prompt-answer">_____________________________________________</span></div>
+            </div>
+            <div class="word-highlight-box">
+                <span class="prompt-label">🌟 My Grid Word Today:</span>
+                <div class="word-box">(row or space)</div>
+            </div>
+            <div class="mood-tracker">My Garden Mood: <span>😊</span><span>😐</span><span>😔</span></div>
+        </div>
+    </div>
+</body>
+
+</html>

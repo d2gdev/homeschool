@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 - Grid Words</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .subtitle {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.4em;
+            color: var(--grid-medium);
+            margin-bottom: 40px;
+        }
+
+        .card-row {
+            border-color: var(--row-orange);
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+        }
+
+        .card-space {
+            border-color: var(--space-cyan);
+            background: linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 100%);
+        }
+
+        .card-count {
+            border-color: var(--count-green);
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+        }
+
+        .card-plant {
+            border-color: var(--grid-bright);
+            background: linear-gradient(135deg, #E8EAF6 0%, #C5CAE9 100%);
+        }
+
+        .card-sun {
+            border-color: var(--row-amber);
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFF59D 100%);
+        }
+
+        .new-badge {
+            background: linear-gradient(135deg, #5C6BC0 0%, #3949AB 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-family: var(--font-display);
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-top: 10px;
+            display: inline-block;
+            box-shadow: 0 2px 8px rgba(92, 107, 192, 0.4);
+        }
+
+        .review-badge {
+            background: #E0E0E0;
+            color: #616161;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-family: var(--font-display);
+            font-size: 0.8em;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .grid-tip {
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(to right, #E8EAF6 0%, #C5CAE9 50%, #E8EAF6 100%);
+            border-radius: 25px;
+            border: 4px solid var(--grid-bright);
+        }
+
+        .grid-tip h3 {
+            color: var(--grid-deep);
+            font-family: var(--font-grid);
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        .grid-tip p {
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--grid-deep);
+            line-height: 1.7;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Grid Words</button>
+    <div class="container">
+        <h1>⊞ Garden Grid Words</h1>
+        <p class="subtitle">Week 7: Planning Rows & Arrays ~ Organize the garden!</p>
+        <div class="card-grid">
+            <div class="card card-row">
+                <div class="icon-large">➡️</div>
+                <div class="word-large">row</div>
+                <div class="new-badge">✨ NEW</div>
+            </div>
+            <div class="card card-space">
+                <div class="icon-large">↔️</div>
+                <div class="word-large">space</div>
+                <div class="new-badge">✨ NEW</div>
+            </div>
+            <div class="card card-count">
+                <div class="icon-large">🔢</div>
+                <div class="word-large">count</div>
+                <div class="new-badge">✨ NEW</div>
+            </div>
+            <div class="card card-plant">
+                <div class="icon-large">🌱</div>
+                <div class="word-large">plant</div>
+                <div class="review-badge">Review</div>
+            </div>
+            <div class="card card-sun">
+                <div class="icon-large">☀️</div>
+                <div class="word-large">sun</div>
+                <div class="review-badge">Review</div>
+            </div>
+        </div>
+        <div class="grid-tip">
+            <h3>⊞ The Magic of Garden Grids</h3>
+            <p>This week we learn to organize <strong>plants</strong> in <strong>rows</strong>! Each
+                <strong>row</strong> needs <strong>space</strong> for the <strong>sun</strong> to reach. We
+                <strong>count</strong> how many plants fit in each row. Grids help gardens grow organized and strong!
+                ⊞🌱</p>
+        </div>
+    </div>
+</body>
+
+</html>

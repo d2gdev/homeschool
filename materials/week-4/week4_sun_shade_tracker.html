@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 - Sun vs Shade Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tracker-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--vein-green);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .tracking-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 40px 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 45px rgba(102, 187, 106, 0.3);
+        }
+
+        .tracking-table th {
+            background: linear-gradient(135deg, var(--leaf-bright) 0%, var(--chlorophyll) 100%);
+            color: white;
+            padding: 20px;
+            font-family: var(--font-display);
+            font-size: 1.3em;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .tracking-table td {
+            padding: 20px;
+            border-bottom: 3px solid #E8F5E9;
+            background: white;
+            text-align: center;
+        }
+
+        .tracking-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .day-cell {
+            font-family: var(--font-display);
+            font-size: 1.4em;
+            font-weight: 600;
+            color: var(--chlorophyll);
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%) !important;
+        }
+
+        .sun-cell {
+            background: linear-gradient(135deg, #FFFDE7 0%, #FFF9C4 100%) !important;
+        }
+
+        .shade-cell {
+            background: linear-gradient(135deg, #E0E0E0 0%, #BDBDBD 100%) !important;
+        }
+
+        .measurement-field {
+            font-family: var(--font-handwritten);
+            font-size: 1.2em;
+            color: var(--vein-green);
+        }
+
+        .conclusion-row {
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFEB3B 100%) !important;
+            font-family: var(--font-display);
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--vein-green);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Sun vs Shade Tracker</button>
+    <div class="container">
+        <h1>☀️ Sun Plant vs Shade Plant</h1>
+        <p class="tracker-intro">Tuesday-Friday: Track both plants every day!<br>Which one grows more with sunlight?
+            ☀️🌑</p>
+        <table class="tracking-table">
+            <thead>
+                <tr>
+                    <th style="width: 15%;">Day</th>
+                    <th style="width: 42.5%;">☀️ Sun Plant</th>
+                    <th style="width: 42.5%;">🌑 Shade Plant</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day-cell">Tuesday</td>
+                    <td class="sun-cell">
+                        <div class="measurement-field">Height: _____ cm</div>
+                        <div class="measurement-field">Leaves: _____</div>
+                    </td>
+                    <td class="shade-cell">
+                        <div class="measurement-field">Height: _____ cm</div>
+                        <div class="measurement-field">Leaves: _____</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="day-cell">Wednesday</td>
+                    <td class="sun-cell">
+                        <div class="measurement-field">Height: _____ cm</div>
+                        <div class="measurement-field">Leaves: _____</div>
+                    </td>
+                    <td class="shade-cell">
+                        <div class="measurement-field">Height: _____ cm</div>
+                        <div class="measurement-field">Leaves: _____</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="day-cell">Thursday</td>
+                    <td class="sun-cell">
+                        <div class="measurement-field">Height: _____ cm</div>
+                        <div class="measurement-field">Leaves: _____</div>
+                    </td>
+                    <td class="shade-cell">
+                        <div class="measurement-field">Height: _____ cm</div>
+                        <div class="measurement-field">Leaves: _____</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="day-cell">Friday</td>
+                    <td class="sun-cell">
+                        <div class="measurement-field">Height: _____ cm</div>
+                        <div class="measurement-field">Leaves: _____</div>
+                    </td>
+                    <td class="shade-cell">
+                        <div class="measurement-field">Height: _____ cm</div>
+                        <div class="measurement-field">Leaves: _____</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="conclusion-row" colspan="3">
+                        <div style="margin: 10px 0;">Which grew more? _______________</div>
+                        <div>By how much? _____ cm</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

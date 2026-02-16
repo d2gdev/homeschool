@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 - Growth Reading Strips</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .reading-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--growth-deep);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .strip-1 {
+            background: linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%);
+            border: 4px solid var(--growth-bright);
+        }
+
+        .strip-2 {
+            background: linear-gradient(135deg, #E1BEE7 0%, #CE93D8 100%);
+            border: 4px solid var(--time-purple);
+            color: var(--growth-deep);
+        }
+
+        .strip-3 {
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFF59D 100%);
+            border: 4px solid var(--sprout-yellow);
+            color: var(--growth-deep);
+        }
+
+        .growth-tracker {
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(to right, #E8F5E9 0%, #C8E6C9 50%, #E8F5E9 100%);
+            border-radius: 25px;
+            border: 4px solid var(--growth-bright);
+        }
+
+        .day-boxes {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .day-box {
+            flex: 1;
+            padding: 15px;
+            background: white;
+            border: 3px dashed var(--growth-bright);
+            border-radius: 15px;
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.1em;
+            color: var(--growth-deep);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Reading Strips</button>
+    <div class="container">
+        <h1>📖 Growth Reading</h1>
+        <p class="reading-intro">Read these growth sentences together every day!<br>Learn how plants change over time!
+            📏</p>
+        <div class="strip strip-1">The plant grows tall. 📏</div>
+        <div class="strip strip-2">Growth takes time. 🕐</div>
+        <div class="strip strip-3">The plant is short today. ⬇️</div>
+        <div class="growth-tracker">
+            <h3
+                style="font-family: var(--font-display); color: var(--growth-deep); margin-bottom: 20px; text-align: center;">
+                📅 Weekly Growth Reading</h3>
+            <p
+                style="font-family: var(--font-playful); font-size: 1.2em; color: var(--growth-deep); margin-bottom: 15px; text-align: center;">
+                Check off each day you read! Watch your understanding grow! 🌱</p>
+            <div class="day-boxes">
+                <div class="day-box">
+                    <div style="font-size: 2em; margin-bottom: 10px;">🌱</div>Monday<br>☐
+                </div>
+                <div class="day-box">
+                    <div style="font-size: 2em; margin-bottom: 10px;">📏</div>Tuesday<br>☐
+                </div>
+                <div class="day-box">
+                    <div style="font-size: 2em; margin-bottom: 10px;">📈</div>Wednesday<br>☐
+                </div>
+                <div class="day-box">
+                    <div style="font-size: 2em; margin-bottom: 10px;">🕐</div>Thursday<br>☐
+                </div>
+                <div class="day-box">
+                    <div style="font-size: 2em; margin-bottom: 10px;">🌿</div>Friday<br>☐
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

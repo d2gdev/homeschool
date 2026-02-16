@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Rows - Week 7 Reader</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .book-instructions {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--grid-deep);
+            margin: 30px 0;
+            padding: 25px;
+            background: linear-gradient(135deg, #E8EAF6 0%, #C5CAE9 100%);
+            border-radius: 20px;
+            border: 4px solid var(--grid-bright);
+        }
+
+        .pages-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .book-page {
+            background: white;
+            border: 6px solid var(--grid-bright);
+            border-radius: 25px;
+            padding: 40px;
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 35px rgba(92, 107, 192, 0.3);
+            page-break-inside: avoid;
+        }
+
+        .book-page::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 15px;
+            background: linear-gradient(to right, var(--row-orange) 0%, var(--grid-bright) 50%, var(--array-purple) 100%);
+            border-radius: 0 0 20px 20px;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 30px;
+            right: 25px;
+            font-family: var(--font-display);
+            font-size: 1.2em;
+            color: white;
+            background: var(--grid-bright);
+            padding: 8px 20px;
+            border-radius: 25px;
+            box-shadow: 0 3px 10px rgba(92, 107, 192, 0.4);
+        }
+
+        .book-cover {
+            background: linear-gradient(to bottom, #E8EAF6 0%, #C5CAE9 100%);
+            border-color: var(--grid-deep);
+        }
+
+        .book-title {
+            font-family: var(--font-display);
+            font-size: 3.5em;
+            font-weight: 600;
+            color: var(--grid-deep);
+            margin: 25px 0;
+            text-shadow: 3px 3px 0 rgba(197, 202, 233, 0.3);
+        }
+
+        .book-subtitle {
+            font-family: var(--font-grid);
+            font-size: 1.5em;
+            color: var(--grid-bright);
+            margin-top: 20px;
+        }
+
+        .page-illustration {
+            font-size: 7em;
+            margin: 35px 0;
+            filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.2));
+        }
+
+        .page-text {
+            font-family: var(--font-grid);
+            font-size: 2.5em;
+            color: var(--grid-deep);
+            line-height: 1.5;
+            margin: 25px 0;
+        }
+
+        .page-row {
+            background: linear-gradient(to bottom, #FFF3E0 0%, white 100%);
+        }
+
+        .page-space {
+            background: linear-gradient(to bottom, #E0F7FA 0%, white 100%);
+        }
+
+        .page-count {
+            background: linear-gradient(to bottom, #E8F5E9 0%, white 100%);
+        }
+
+        .page-grid {
+            background: white;
+            background-image: radial-gradient(#C5CAE9 2px, transparent 2px);
+            background-size: 20px 20px;
+        }
+
+        .divider {
+            grid-column: 1 / -1;
+            text-align: center;
+            font-size: 1.8em;
+            color: var(--grid-bright);
+            margin: 25px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Grid Reader</button>
+    <div class="container">
+        <h1>📚 Week 7 Grid Reader</h1>
+        <div class="book-instructions"><strong>⊞ Making Your Book:</strong> Print these pages. Cut along borders. Stack
+            in number order. Staple the left edge. Read together every day to learn about rows! ➡️</div>
+        <div class="pages-grid">
+            <div class="book-page book-cover">
+                <div class="book-title">Garden<br>Rows</div>
+                <div class="page-illustration">⊞</div>
+                <div class="book-subtitle">A Story of Order</div>
+                <div class="page-number">Cover</div>
+            </div>
+            <div class="book-page page-row">
+                <div class="page-illustration">➡️</div>
+                <div class="page-text">A row.</div>
+                <div class="page-number">1</div>
+            </div>
+        </div>
+        <div class="divider">✂️ - - - - - - - - - - - - - - - - - - - - - - - - - - - - ✂️</div>
+        <div class="pages-grid">
+            <div class="book-page page-row">
+                <div class="page-illustration">🌱 🌱</div>
+                <div class="page-text">Plants grow<br>in rows.</div>
+                <div class="page-number">2</div>
+            </div>
+            <div class="book-page page-space">
+                <div class="page-illustration">🌱 ↔️ 🌱</div>
+                <div class="page-text">Each row<br>has space.</div>
+                <div class="page-number">3</div>
+            </div>
+        </div>
+        <div class="divider">✂️ - - - - - - - - - - - - - - - - - - - - - - - - - - - - ✂️</div>
+        <div class="pages-grid">
+            <div class="book-page page-count">
+                <div class="page-illustration">1️⃣ 2️⃣ 3️⃣</div>
+                <div class="page-text">We count<br>the plants.</div>
+                <div class="page-number">4</div>
+            </div>
+            <div class="book-page page-grid">
+                <div class="page-illustration">⊞</div>
+                <div class="page-text">Rows help<br>us plan.</div>
+                <div class="page-number">5</div>
+            </div>
+        </div>
+        <div class="divider">✂️ - - - - - - - - - - - - - - - - - - - - - - - - - - - - ✂️</div>
+        <div class="pages-grid">
+            <div class="book-page page-row">
+                <div class="page-illustration">☀️ ➡️</div>
+                <div class="page-text">Sun shines<br>on rows.</div>
+                <div class="page-number">6</div>
+            </div>
+            <div class="book-page page-grid">
+                <div class="page-illustration">🌱 🌻</div>
+                <div class="page-text">Good garden!</div>
+                <div class="page-number">End</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

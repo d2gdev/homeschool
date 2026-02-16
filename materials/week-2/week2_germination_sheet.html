@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 - Germination Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tracker-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--soil-deep);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        /* Clear cup visualization */
+        .cup-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            min-height: 250px;
+        }
+
+        .clear-cup {
+            width: 180px;
+            height: 220px;
+            border: 5px solid rgba(141, 110, 99, 0.4);
+            border-top: none;
+            border-radius: 0 0 30px 30px;
+            background: linear-gradient(to bottom,
+                    rgba(224, 242, 241, 0.3) 0%,
+                    rgba(239, 235, 233, 0.5) 40%,
+                    rgba(215, 204, 200, 0.7) 100%);
+            position: relative;
+            box-shadow:
+                inset 0 0 30px rgba(255, 255, 255, 0.5),
+                0 5px 20px rgba(121, 85, 72, 0.2);
+        }
+
+        .clear-cup::before {
+            content: 'Clear Cup';
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: var(--font-playful);
+            font-size: 0.9em;
+            color: var(--clay-deep);
+        }
+
+        .clear-cup::after {
+            content: '✏️ Draw roots';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--font-playful);
+            font-size: 1.1em;
+            color: var(--seed-core);
+            opacity: 0.5;
+            text-align: center;
+        }
+
+        .germination-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 40px 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(121, 85, 72, 0.2);
+        }
+
+        .germination-table th {
+            background: linear-gradient(135deg, var(--seed-core) 0%, var(--clay-deep) 100%);
+            color: white;
+            padding: 20px;
+            font-family: var(--font-display);
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .germination-table td {
+            padding: 20px;
+            border-bottom: 3px solid #EFEBE9;
+            background: white;
+        }
+
+        .germination-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .day-cell {
+            font-family: var(--font-display);
+            font-size: 1.4em;
+            font-weight: 600;
+            color: var(--seed-core);
+            text-align: center;
+            background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%) !important;
+        }
+
+        .measurement-field {
+            font-family: var(--font-handwritten);
+            font-size: 1.3em;
+            color: var(--soil-deep);
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Sequence boxes at bottom */
+        .sequence-section {
+            margin-top: 50px;
+            padding: 35px;
+            background: linear-gradient(to right,
+                    #EFEBE9 0%,
+                    #D7CCC8 50%,
+                    #EFEBE9 100%);
+            border-radius: 25px;
+            border: 5px solid var(--seed-core);
+        }
+
+        .sequence-title {
+            font-family: var(--font-display);
+            font-size: 2em;
+            color: var(--clay-deep);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sequence-flow {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .sequence-box {
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .sequence-drawing {
+            height: 180px;
+            background: white;
+            border: 4px dashed var(--seed-core);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-playful);
+            font-size: 1.1em;
+            color: var(--clay-deep);
+            margin-bottom: 15px;
+        }
+
+        .sequence-label {
+            font-family: var(--font-display);
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--soil-deep);
+            text-align: center;
+        }
+
+        .arrow {
+            font-size: 3em;
+            color: var(--sprout-new);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Germination Tracker</button>
+
+    <div class="container">
+        <h1>🌰 Germination Watch</h1>
+        <p class="tracker-intro">
+            Watch the magic happen! Draw what you see through the clear cup each day.<br>
+            Seeds become roots, roots become plants! 🥕
+        </p>
+
+        <table class="germination-table">
+            <thead>
+                <tr>
+                    <th style="width: 15%;">Day</th>
+                    <th>What do you see in the cup?</th>
+                    <th style="width: 25%;">Root Length</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day-cell">Monday</td>
+                    <td>
+                        <div class="cup-container">
+                            <div class="clear-cup"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="measurement-field">_____ cm</div>
+                        <div
+                            style="text-align: center; margin-top: 10px; font-family: var(--font-playful); color: var(--clay-deep);">
+                            (or "Not yet!")
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="day-cell">Tuesday</td>
+                    <td>
+                        <div class="cup-container">
+                            <div class="clear-cup"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="measurement-field">_____ cm</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="day-cell">Wednesday</td>
+                    <td>
+                        <div class="cup-container">
+                            <div class="clear-cup"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="measurement-field">_____ cm</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="day-cell">Thursday</td>
+                    <td>
+                        <div class="cup-container">
+                            <div class="clear-cup"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="measurement-field">_____ cm</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="day-cell">Friday</td>
+                    <td>
+                        <div class="cup-container">
+                            <div class="clear-cup"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="measurement-field">_____ cm</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="sequence-section">
+            <div class="sequence-title">🌱 Friday: Draw the Life Cycle</div>
+            <div class="sequence-flow">
+                <div class="sequence-box">
+                    <div class="sequence-drawing">
+                        Draw a<br>seed 🌰
+                    </div>
+                    <div class="sequence-label">1. Seed</div>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="sequence-box">
+                    <div class="sequence-drawing">
+                        Draw roots<br>growing down 🥕
+                    </div>
+                    <div class="sequence-label">2. Root</div>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="sequence-box">
+                    <div class="sequence-drawing">
+                        Draw a<br>plant 🌱
+                    </div>
+                    <div class="sequence-label">3. Plant</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

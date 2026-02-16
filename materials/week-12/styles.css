@@ -1,0 +1,259 @@
+/* Week 12: Garden Project - Graduation & Celebration Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    /* Celebration Color Palette */
+    --emerald-green: #2E7D32;
+    --leaf-green: #66BB6A;
+
+    --award-gold: #FFD700;
+    --award-bronze: #CD7F32;
+
+    --ribbon-red: #D32F2F;
+    --certificate-white: #FAFAFA;
+    --parchment: #FFF8E1;
+
+    /* Typography */
+    --font-display: 'Fredoka', sans-serif;
+    --font-fancy: 'Dancing Script', cursive;
+    --font-clean: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-display);
+    /* Confetti Background */
+    background-color: #E8F5E9;
+    background-image:
+        radial-gradient(var(--award-gold) 15%, transparent 16%),
+        radial-gradient(var(--leaf-green) 15%, transparent 16%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+    min-height: 100vh;
+    padding: 20px;
+    color: #1B5E20;
+    /* Dark green text */
+}
+
+/* Certificate/Award Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px;
+    border: 10px double var(--award-gold);
+    border-radius: 20px;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.15),
+        inset 0 0 80px rgba(255, 215, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Corner Ribbons */
+.container::before {
+    content: '🏆';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 3em;
+}
+
+.container::after {
+    content: '🏆';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 3em;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--emerald-green);
+}
+
+h1 {
+    font-family: var(--font-fancy);
+    font-size: 4em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0 var(--award-gold);
+}
+
+h2 {
+    font-family: var(--font-display);
+    border-bottom: 2px solid var(--award-gold);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+
+/* Card Styles (Golden Master Set) */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 4px solid var(--award-gold);
+    /* Golden border */
+}
+
+.card-ribbon {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--ribbon-red);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-family: var(--font-fancy);
+    font-size: 1.2em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.word-large {
+    font-family: var(--font-display);
+    font-size: 2.2em;
+    font-weight: 600;
+    color: var(--emerald-green);
+    margin: 15px 0;
+}
+
+.icon-large {
+    font-size: 4em;
+    filter: drop-shadow(2px 2px 0 var(--award-gold));
+}
+
+/* Reading Strips ("Ribbon Banners") */
+.strip {
+    background: white;
+    padding: 20px 40px;
+    margin: 25px 0;
+    font-family: var(--font-display);
+    font-size: 2em;
+    text-align: center;
+    color: var(--emerald-green);
+    border-top: 5px solid var(--emerald-green);
+    border-bottom: 5px solid var(--emerald-green);
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.strip::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: var(--award-gold);
+}
+
+.strip::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: var(--award-gold);
+}
+
+/* Garden Grid (Graph paper) */
+.garden-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2px;
+    background: #ccc;
+    border: 5px solid var(--emerald-green);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.grid-cell {
+    background: white;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.grid-cell:hover {
+    background: #E8F5E9;
+}
+
+/* Table Styles */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+.data-table th,
+.data-table td {
+    padding: 15px;
+    border: 2px solid #ddd;
+    text-align: center;
+}
+
+.data-table th {
+    background: var(--emerald-green);
+    color: white;
+}
+
+/* Print button */
+.print-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 15px 40px;
+    background: var(--ribbon-red);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-display);
+    font-size: 1.3em;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        border: 5px double #000;
+    }
+
+    .print-btn {
+        display: none;
+    }
+
+    .page-break {
+        page-break-before: always;
+    }
+}

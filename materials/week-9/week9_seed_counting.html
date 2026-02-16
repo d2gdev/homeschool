@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 - Seed Counting</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .counting-row {
+            background: #FAFAFA;
+            border: 2px dashed var(--seed-brown-light);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .seed-img {
+            font-size: 2em;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        .count-box {
+            display: inline-block;
+            width: 60px;
+            height: 50px;
+            border-bottom: 3px solid var(--seed-brown-dark);
+            text-align: center;
+            font-family: var(--font-display);
+            font-size: 1.5em;
+            margin: 0 5px;
+            background: #EFEBE9;
+            padding-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Seed Counting</button>
+    <div class="container">
+        <h1>🔢 Counting by Groups</h1>
+        <p style="text-align: center; font-family: var(--font-handwritten); font-size: 1.5em; margin-bottom: 20px;">
+            Circle the seeds in groups. Then finish the count!
+        </p>
+
+        <!-- Count by 2s -->
+        <div class="counting-row">
+            <div style="flex: 1;">
+                <h3>Groups of 2 (Pairs)</h3>
+                <div style="font-size: 1.5em; margin: 10px 0;">
+                    🌰🌰 &nbsp; 🌰🌰 &nbsp; 🌰🌰 &nbsp; 🌰🌰 &nbsp; 🌰🌰
+                </div>
+                <div>
+                    <span class="count-box">2</span>
+                    <span class="count-box">4</span>
+                    <span class="count-box"></span>
+                    <span class="count-box"></span>
+                    <span class="count-box"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Count by 3s -->
+        <div class="counting-row" style="background: #E3F2FD;">
+            <div style="flex: 1;">
+                <h3>Groups of 3</h3>
+                <div style="font-size: 1.5em; margin: 10px 0;">
+                    🫐🫐🫐 &nbsp; 🫐🫐🫐 &nbsp; 🫐🫐🫐 &nbsp; 🫐🫐🫐 &nbsp; 🫐🫐🫐
+                </div>
+                <div>
+                    <span class="count-box">3</span>
+                    <span class="count-box">6</span>
+                    <span class="count-box"></span>
+                    <span class="count-box"></span>
+                    <span class="count-box"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Count by 5s -->
+        <div class="counting-row" style="background: #E8F5E9;">
+            <div style="flex: 1;">
+                <h3>Groups of 5</h3>
+                <div style="font-size: 1.5em; margin: 10px 0;">
+                    🫘🫘🫘🫘🫘 &nbsp; 🫘🫘🫘🫘🫘 &nbsp; 🫘🫘🫘🫘🫘 &nbsp; 🫘🫘🫘🫘🫘
+                </div>
+                <div>
+                    <span class="count-box">5</span>
+                    <span class="count-box">10</span>
+                    <span class="count-box"></span>
+                    <span class="count-box"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

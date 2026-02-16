@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 12 - Watering Plan</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .cal-day {
+            border: 2px solid #2196F3;
+            border-radius: 10px;
+            height: 120px;
+            text-align: center;
+            background: #E3F2FD;
+        }
+
+        .day-name {
+            font-weight: bold;
+            background: white;
+            border-radius: 8px 8px 0 0;
+            padding: 5px;
+        }
+
+        .drop-mark {
+            font-size: 2em;
+            color: #2196F3;
+            margin-top: 10px;
+            opacity: 0.3;
+            cursor: pointer;
+        }
+
+        .drop-mark:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Watering Calendar</button>
+    <div class="container">
+        <h1>💧 Watering Schedule</h1>
+        <p style="text-align: center;">When does your garden need water?</p>
+
+        <div class="calendar-grid">
+            <div class="cal-day">
+                <div class="day-name">Mon</div>
+                <div class="drop-mark">💧</div>
+            </div>
+            <div class="cal-day">
+                <div class="day-name">Tue</div>
+                <div class="drop-mark">💧</div>
+            </div>
+            <div class="cal-day">
+                <div class="day-name">Wed</div>
+                <div class="drop-mark">💧</div>
+            </div>
+            <div class="cal-day">
+                <div class="day-name">Thu</div>
+                <div class="drop-mark">💧</div>
+            </div>
+            <div class="cal-day">
+                <div class="day-name">Fri</div>
+                <div class="drop-mark">💧</div>
+            </div>
+            <div class="cal-day">
+                <div class="day-name">Sat</div>
+                <div class="drop-mark">💧</div>
+            </div>
+            <div class="cal-day">
+                <div class="day-name">Sun</div>
+                <div class="drop-mark">💧</div>
+            </div>
+        </div>
+
+        <div
+            style="margin-top: 40px; text-align: center; font-size: 1.5em; background: white; padding: 20px; border-radius: 15px; border: 2px dashed #999;">
+            I will water my plants <span style="display:inline-block; width:50px; border-bottom:2px solid #333;"></span>
+            times per week.
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 11 - Weather Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .badge {
+            background: var(--rain-dark);
+            color: white;
+            font-size: 0.8em;
+            padding: 5px 10px;
+            border-radius: 20px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Weather Cards</button>
+    <div class="container">
+        <h1>☀️ Weather Words</h1>
+        <p style="text-align: center; font-family: var(--font-clean); font-size: 1.5em; margin-bottom: 40px;">
+            What is the weather like today?
+        </p>
+
+        <div class="card-grid">
+            <div class="card" style="border-bottom-color: var(--sun-orange);">
+                <div class="badge">Reused</div>
+                <div class="icon-large icon-sun">☀️</div>
+                <div class="word-large">sun</div>
+            </div>
+
+            <div class="card" style="border-bottom-color: var(--rain-blue);">
+                <div class="badge">NEW</div>
+                <div class="icon-large icon-rain">🌧️</div>
+                <div class="word-large">rain</div>
+            </div>
+
+            <div class="card" style="border-bottom-color: var(--hot-red);">
+                <div class="badge">NEW</div>
+                <div class="icon-large icon-hot">🌡️🔥</div>
+                <div class="word-large">hot</div>
+            </div>
+
+            <div class="card" style="border-bottom-color: var(--cold-cyan);">
+                <div class="badge">NEW</div>
+                <div class="icon-large icon-cold">🌡️❄️</div>
+                <div class="word-large">cold</div>
+            </div>
+
+            <div class="card" style="border-bottom-color: #607D8B;">
+                <div class="badge">NEW</div>
+                <div class="icon-large">🌤️⛈️</div>
+                <div class="word-large">weather</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 50px; background: #E0F7FA; padding: 20px; border-radius: 20px; text-align: center;">
+            <h3 style="color: var(--rain-dark);">Parent Tip:</h3>
+            <p style="font-size: 1.2em; font-family: var(--font-clean);">
+                Check the thermometer each morning! Is the red line high (hot) or low (cold)?
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

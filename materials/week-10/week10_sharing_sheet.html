@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 - Sharing Sheet</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .problem-box {
+            background: white;
+            border: 2px solid var(--basket-brown);
+            border-radius: 15px;
+            margin: 30px 0;
+            padding: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .drawing-space {
+            border: 2px dashed #ccc;
+            height: 100px;
+            margin-top: 15px;
+            background: #FAFAFA;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+        }
+
+        .input-line {
+            display: inline-block;
+            width: 60px;
+            border-bottom: 2px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Sharing Sheet</button>
+    <div class="container">
+        <h1>🤝 Sharing Equally</h1>
+        <p style="text-align: center;">Record your sharing math!</p>
+
+        <!-- Problem 1 -->
+        <div class="problem-box">
+            <h3 style="text-align: left; margin-bottom: 10px;">Problem 1</h3>
+            <p style="font-size: 1.3em; line-height: 2em; font-family: var(--font-handwritten);">
+                We have <span class="input-line"></span> items.<br>
+                We share between <span class="input-line"></span> people.<br>
+                Each person gets: <span class="input-line"></span><br>
+                Leftover: <span class="input-line"></span>
+            </p>
+            <div class="drawing-space">Draw the groups</div>
+        </div>
+
+        <!-- Problem 2 -->
+        <div class="problem-box">
+            <h3 style="text-align: left; margin-bottom: 10px;">Problem 2</h3>
+            <p style="font-size: 1.3em; line-height: 2em; font-family: var(--font-handwritten);">
+                We have <span class="input-line"></span> items.<br>
+                We share between <span class="input-line"></span> people.<br>
+                Each person gets: <span class="input-line"></span><br>
+                Leftover: <span class="input-line"></span>
+            </p>
+            <div class="drawing-space">Draw the groups</div>
+        </div>
+
+        <!-- Problem 3 -->
+        <div class="problem-box">
+            <h3 style="text-align: left; margin-bottom: 10px;">Problem 3</h3>
+            <p style="font-size: 1.3em; line-height: 2em; font-family: var(--font-handwritten);">
+                We have <span class="input-line"></span> items.<br>
+                We share between <span class="input-line"></span> people.<br>
+                Each person gets: <span class="input-line"></span><br>
+                Leftover: <span class="input-line"></span>
+            </p>
+            <div class="drawing-space">Draw the groups</div>
+        </div>
+
+    </div>
+</body>
+
+</html>

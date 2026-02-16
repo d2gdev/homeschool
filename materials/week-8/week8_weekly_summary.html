@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 - Summary</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .summary-box {
+            background: #FFF3E0;
+            border: 3px solid var(--soil-rich);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .draw-area {
+            height: 250px;
+            background: white;
+            border: 2px dashed #999;
+            margin-top: 20px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .draw-area::after {
+            content: 'Draw your favorite bug!';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: #ccc;
+        }
+
+        .copy-line {
+            border-bottom: 2px dotted #5D4037;
+            height: 50px;
+            margin: 20px 0;
+            font-family: var(--font-handwritten);
+            font-size: 2em;
+            line-height: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Week Summary</button>
+    <div class="container">
+        <h1>🌟 Week 8 Summary</h1>
+        <p style="text-align: center;">Garden Ecosystem: Bugs & Soil</p>
+
+        <div class="summary-box">
+            <h3>Something I learned:</h3>
+            <div class="copy-line">___________________________</div>
+            <div class="copy-line">___________________________</div>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <h3>Copy this sentence:</h3>
+            <p style="font-family: var(--font-display); font-size: 2em; margin: 10px 0; color: var(--soil-rich);">
+                Worms help soil.
+            </p>
+            <div class="copy-line"></div>
+        </div>
+
+        <div class="draw-area"></div>
+
+        <div style="margin-top: 20px; font-size: 1.5em; text-align: center;">
+            My favorite bug was the: ________________
+        </div>
+    </div>
+</body>
+
+</html>

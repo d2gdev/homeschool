@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 11 - Reading</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .strip-hot {
+            border-color: var(--hot-red);
+            box-shadow: 0 5px 0 #FFCDD2;
+        }
+
+        .strip-rain {
+            border-color: var(--rain-blue);
+            box-shadow: 0 5px 0 #B3E5FC;
+        }
+
+        .strip-warm {
+            border-color: var(--sun-orange);
+            box-shadow: 0 5px 0 #FFECB3;
+        }
+
+        .tracker {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            background: #E0F7FA;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .day-check {
+            width: 50px;
+            height: 50px;
+            border: 2px dashed #00ACC1;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Reading Scraps</button>
+    <div class="container">
+        <h1>☀️ Reading the Weather</h1>
+        <p style="text-align: center; font-family: var(--font-clean); font-size: 1.5em; margin-bottom: 30px;">
+            Read your weather report!
+        </p>
+
+        <div class="strip strip-hot">
+            The sun is hot. 🔥
+        </div>
+
+        <div class="strip strip-rain">
+            Rain helps plants. 🌧️
+        </div>
+
+        <div class="strip strip-warm">
+            Plants like warm weather. 🌱
+        </div>
+
+        <div class="strip">
+            Today the weather is _________.
+        </div>
+
+        <div class="tracker">
+            <div>Mon <div class="day-check"></div>
+            </div>
+            <div>Tue <div class="day-check"></div>
+            </div>
+            <div>Wed <div class="day-check"></div>
+            </div>
+            <div>Thu <div class="day-check"></div>
+            </div>
+            <div>Fri <div class="day-check"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

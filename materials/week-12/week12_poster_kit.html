@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 12 - Poster Kit</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .banner-large {
+            text-align: center;
+            border: 5px solid var(--emerald-green);
+            background: var(--award-gold);
+            color: white;
+            padding: 30px;
+            font-family: var(--font-fancy);
+            font-size: 3em;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 0 #3E2723;
+        }
+
+        .section-header {
+            border: 2px dashed #999;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            background: #E8F5E9;
+            font-family: var(--font-display);
+            font-size: 2em;
+            color: var(--emerald-green);
+        }
+
+        .cut-line {
+            border-top: 1px dashed #ccc;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .cut-line::after {
+            content: '✂️ Cut Here';
+            position: absolute;
+            right: 0;
+            top: -10px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Poster Kit</button>
+    <div class="container">
+        <h2 style="font-family: var(--font-clean); color: #999;">Cut these out for your poster!</h2>
+
+        <div class="banner-large">
+            My Garden Project 🏆
+        </div>
+
+        <div class="cut-line"></div>
+
+        <div class="section-header">
+            🏡 My Garden Design
+        </div>
+
+        <div class="cut-line"></div>
+
+        <div class="section-header">
+            📏 What I Measured
+        </div>
+
+        <div class="cut-line"></div>
+
+        <div class="section-header">
+            🎨 My Favorite Drawing
+        </div>
+
+        <div class="cut-line"></div>
+
+        <div class="section-header">
+            🎓 What I Learned
+        </div>
+
+    </div>
+</body>
+
+</html>

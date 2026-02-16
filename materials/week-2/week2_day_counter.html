@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 - Germination Day Counter</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .counter-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--soil-deep);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .counter-strip {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right,
+                    #EFEBE9 0%,
+                    #D7CCC8 50%,
+                    #EFEBE9 100%);
+            border: 6px solid var(--seed-core);
+            border-radius: 25px;
+            padding: 40px 30px;
+            margin: 50px 0;
+            box-shadow: 0 10px 40px rgba(121, 85, 72, 0.25);
+            position: relative;
+        }
+
+        /* Underground soil layers decoration */
+        .counter-strip::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 15px;
+            background: repeating-linear-gradient(90deg,
+                    var(--root-cream) 0px,
+                    var(--root-cream) 10px,
+                    var(--seed-core) 10px,
+                    var(--seed-core) 20px);
+            border-radius: 0 0 20px 20px;
+        }
+
+        .day-block {
+            width: 140px;
+            height: 140px;
+            background: white;
+            border: 4px solid var(--seed-core);
+            border-radius: 20px;
+            text-align: center;
+            font-family: var(--font-display);
+            font-size: 1.6em;
+            font-weight: 600;
+            color: var(--soil-deep);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 20px rgba(121, 85, 72, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .day-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(121, 85, 72, 0.25);
+        }
+
+        .cube-area {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+            border: 3px dashed var(--clay-deep);
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.5em;
+            color: var(--clay-deep);
+            border-radius: 10px;
+        }
+
+        .day-5 {
+            background: linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%);
+            border-color: var(--sprout-new);
+            border-width: 5px;
+        }
+
+        .arrow {
+            font-size: 2.5em;
+            color: var(--seed-core);
+        }
+
+        .counting-section {
+            margin-top: 50px;
+            padding: 35px;
+            background: linear-gradient(135deg, #E0F2F1 0%, #B2DFDB 100%);
+            border-radius: 25px;
+            border: 4px solid var(--water-underground);
+            text-align: center;
+        }
+
+        .counting-question {
+            font-family: var(--font-display);
+            font-size: 2em;
+            color: var(--clay-deep);
+            margin-bottom: 25px;
+        }
+
+        .answer-box-large {
+            width: 200px;
+            height: 120px;
+            background: white;
+            border: 5px solid var(--seed-core);
+            border-radius: 20px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 4em;
+            font-weight: 600;
+            color: var(--soil-deep);
+            box-shadow: inset 0 3px 15px rgba(121, 85, 72, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Day Counter</button>
+
+    <div class="container">
+        <h1>🔢 Germination Day Counter</h1>
+        <p class="counter-intro">
+            Count the days since we planted our seeds!<br>
+            Place one cube on each box as the days pass 🌰
+        </p>
+
+        <div class="counter-strip">
+            <div class="day-block">
+                Day 1
+                <div class="cube-area">🧱</div>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="day-block">
+                Day 2
+                <div class="cube-area">🧱</div>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="day-block">
+                Day 3
+                <div class="cube-area">🧱</div>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="day-block">
+                Day 4
+                <div class="cube-area">🧱</div>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="day-block day-5">
+                Day 5!
+                <div class="cube-area" style="border-color: var(--sprout-new);">🧱</div>
+            </div>
+        </div>
+
+        <div class="counting-section">
+            <div class="counting-question">
+                🌱 How many days since we planted the seed?
+            </div>
+            <div class="answer-box-large">
+                ____
+            </div>
+            <div style="font-family: var(--font-playful); font-size: 1.5em; color: var(--clay-deep); margin-top: 20px;">
+                days
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

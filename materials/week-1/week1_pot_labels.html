@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 - Plant Experiment Labels</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .labels-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--soil-deep);
+            margin: 30px 0 50px 0;
+            line-height: 1.8;
+        }
+
+        /* Seed packet inspired design */
+        .label-packet {
+            background: white;
+            border: 6px solid var(--earth-warm);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 30px 0;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(141, 110, 99, 0.2);
+        }
+
+        .label-packet::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 15px;
+            background: repeating-linear-gradient(45deg,
+                    var(--earth-warm),
+                    var(--earth-warm) 10px,
+                    var(--clay-terracotta) 10px,
+                    var(--clay-terracotta) 20px);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .label-title {
+            font-family: var(--font-display);
+            font-size: 2em;
+            font-weight: 600;
+            color: var(--soil-deep);
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .label-main-text {
+            font-family: var(--font-handwritten);
+            font-size: 3.5em;
+            font-weight: bold;
+            color: var(--soil-rich);
+            text-align: center;
+            margin: 25px 0;
+            letter-spacing: 2px;
+            line-height: 1.3;
+        }
+
+        .label-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 3.5em;
+            margin: 25px 0;
+        }
+
+        /* Unique colors for each experiment condition */
+        .label-a {
+            border-color: var(--water-clear);
+            background: linear-gradient(to bottom, #E1F5FE 0%, #FFF9C4 100%);
+        }
+
+        .label-a::before {
+            background: repeating-linear-gradient(45deg,
+                    var(--water-clear),
+                    var(--water-clear) 10px,
+                    var(--sun-golden) 10px,
+                    var(--sun-golden) 20px);
+        }
+
+        .label-b {
+            border-color: #D32F2F;
+            background: linear-gradient(to bottom, #FFEBEE 0%, #EFEBE9 100%);
+        }
+
+        .label-b::before {
+            background: repeating-linear-gradient(45deg,
+                    #D32F2F,
+                    #D32F2F 10px,
+                    #E57373 10px,
+                    #E57373 20px);
+        }
+
+        .label-c {
+            border-color: #757575;
+            background: linear-gradient(to bottom, #ECEFF1 0%, #CFD8DC 100%);
+        }
+
+        .label-c::before {
+            background: repeating-linear-gradient(45deg,
+                    #757575,
+                    #757575 10px,
+                    #9E9E9E 10px,
+                    #9E9E9E 20px);
+        }
+
+        .cutting-guide {
+            margin-top: 50px;
+            padding: 25px;
+            background: #FFF9C4;
+            border-radius: 20px;
+            border: 3px dashed var(--sun-golden);
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--soil-deep);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Experiment Labels</button>
+
+    <div class="container">
+        <h1>🏷️ Plant Experiment Labels</h1>
+        <p class="labels-intro">
+            Cut out these labels and tape them to your plant pots!<br>
+            Each label shows what special care (or challenge!) that plant will get 🌱
+        </p>
+
+        <div class="label-packet label-a">
+            <div class="label-title">Plant A</div>
+            <div class="label-icons">💧 + ☀️</div>
+            <div class="label-main-text">
+                Water<br>
+                +<br>
+                Sun
+            </div>
+            <div
+                style="text-align: center; font-family: var(--font-playful); font-size: 1.2em; color: var(--soil-deep); margin-top: 20px;">
+                This plant gets everything it needs!
+            </div>
+        </div>
+
+        <div class="label-packet label-b">
+            <div class="label-title">Plant B</div>
+            <div class="label-icons">🚫 💧</div>
+            <div class="label-main-text">
+                No<br>
+                Water
+            </div>
+            <div
+                style="text-align: center; font-family: var(--font-playful); font-size: 1.2em; color: #D32F2F; margin-top: 20px;">
+                This plant will be thirsty!
+            </div>
+        </div>
+
+        <div class="label-packet label-c">
+            <div class="label-title">Plant C</div>
+            <div class="label-icons">☁️ / ☂️</div>
+            <div class="label-main-text">
+                Shade<br>
+                Only
+            </div>
+            <div
+                style="text-align: center; font-family: var(--font-playful); font-size: 1.2em; color: #757575; margin-top: 20px;">
+                This plant stays in the shadows!
+            </div>
+        </div>
+
+        <div class="cutting-guide">
+            <strong>✂️ Cutting & Using:</strong> Cut along the outer edge of each label.
+            Tape or tie them to your plant pots. These labels help you remember which plant
+            gets which treatment in your experiment! 🔬🌿
+        </div>
+    </div>
+</body>
+
+</html>

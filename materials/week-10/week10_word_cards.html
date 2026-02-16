@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 - Harvest Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .card-harvest {
+            background: #FFF8E1;
+            border-color: var(--harvest-gold);
+        }
+
+        .card-share {
+            background: #E8F5E9;
+            border-color: var(--share-green);
+        }
+
+        .card-cut {
+            background: #EFEBE9;
+            border-color: #9E9E9E;
+        }
+
+        .card-equal {
+            background: #E3F2FD;
+            border-color: var(--share-blue);
+        }
+
+        .card-food {
+            background: #FFEBEE;
+            border-color: var(--tablecloth-red);
+        }
+
+        .badge-new {
+            background: var(--pumpkin-orange);
+            color: white;
+            font-size: 0.8em;
+            padding: 5px 10px;
+            border-radius: 20px;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            transform: rotate(15deg);
+            font-family: var(--font-handwritten);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Harvest Cards</button>
+    <div class="container">
+        <h1>🍂 Harvest & Sharing</h1>
+        <p style="text-align: center; font-family: var(--font-handwritten); font-size: 1.5em; margin-bottom: 40px;">
+            Words for our garden feast!
+        </p>
+
+        <div class="cards-container">
+            <div class="card card-harvest">
+                <div class="badge-new">NEW</div>
+                <div class="icon-large">🧺</div>
+                <div class="word-large">harvest</div>
+            </div>
+
+            <div class="card card-share">
+                <div class="badge-new">NEW</div>
+                <div class="icon-large">🤲</div> <!-- Offering hands -->
+                <div class="word-large">share</div>
+            </div>
+
+            <div class="card card-cut">
+                <div class="badge-new">NEW</div>
+                <div class="icon-large">✂️</div>
+                <div class="word-large">cut</div>
+            </div>
+
+            <div class="card card-equal">
+                <div class="badge-new">NEW</div>
+                <div class="icon-large">=</div>
+                <div class="word-large">equal</div>
+            </div>
+
+            <div class="card card-food">
+                <div class="badge-new">NEW</div>
+                <div class="icon-large">🍎</div>
+                <div class="word-large">food</div>
+            </div>
+        </div>
+
+        <div
+            style="margin-top: 50px; padding: 20px; border: 2px dashed var(--basket-brown); border-radius: 15px; text-align: center; font-family: var(--font-friendly);">
+            <strong>Think About It:</strong><br>
+            If we <strong>harvest</strong> 2 apples and <strong>share</strong> them <strong>equally</strong>, <br>
+            how much <strong>food</strong> does everyone get?
+        </div>
+    </div>
+</body>
+
+</html>

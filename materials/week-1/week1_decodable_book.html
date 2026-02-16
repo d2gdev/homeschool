@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sun and Water - Garden Reader</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .book-instructions {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--soil-deep);
+            margin: 30px 0;
+            padding: 20px;
+            background: #FFF9C4;
+            border-radius: 15px;
+            border: 3px dashed var(--sun-golden);
+        }
+
+        .pages-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        /* Book page design */
+        .book-page {
+            background: white;
+            border: 5px solid var(--earth-warm);
+            border-radius: 20px;
+            padding: 35px;
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 8px 25px rgba(141, 110, 99, 0.2);
+            page-break-inside: avoid;
+        }
+
+        .book-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: linear-gradient(90deg,
+                    var(--leaf-vibrant) 0%,
+                    var(--sun-golden) 50%,
+                    var(--water-clear) 100%);
+            border-radius: 15px 15px 0 0;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-family: var(--font-display);
+            font-size: 1.1em;
+            color: var(--earth-warm);
+            background: #EFEBE9;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .book-cover {
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
+            border-color: var(--sun-golden);
+        }
+
+        .book-title {
+            font-family: var(--font-display);
+            font-size: 3em;
+            font-weight: 600;
+            color: var(--soil-deep);
+            margin: 20px 0;
+            text-shadow: 2px 2px 0 rgba(255, 167, 38, 0.2);
+        }
+
+        .book-subtitle {
+            font-family: var(--font-playful);
+            font-size: 1.4em;
+            color: var(--earth-warm);
+            margin-top: 15px;
+        }
+
+        .page-illustration {
+            font-size: 6em;
+            margin: 30px 0;
+            filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.1));
+        }
+
+        .page-text {
+            font-family: var(--font-handwritten);
+            font-size: 2.5em;
+            color: var(--soil-deep);
+            line-height: 1.5;
+            margin: 20px 0;
+        }
+
+        /* Unique backgrounds for different page themes */
+        .page-sun {
+            background: linear-gradient(to bottom, #FFF9C4 0%, white 100%);
+        }
+
+        .page-water {
+            background: linear-gradient(to bottom, #E1F5FE 0%, white 100%);
+        }
+
+        .page-plant {
+            background: linear-gradient(to bottom, #E8F5E9 0%, white 100%);
+        }
+
+        .page-soil {
+            background: linear-gradient(to bottom, #EFEBE9 0%, white 100%);
+        }
+
+        .divider {
+            grid-column: 1 / -1;
+            text-align: center;
+            font-size: 1.5em;
+            color: var(--earth-warm);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Garden Reader</button>
+
+    <div class="container">
+        <h1>📚 Week 1 Garden Reader</h1>
+
+        <div class="book-instructions">
+            <strong>📖 How to Make Your Book:</strong> Print this page. Cut out each page along the borders.
+            Stack them in order (look at the page numbers!). Staple on the left side.
+            Read together every day this week! 🌱
+        </div>
+
+        <div class="pages-grid">
+            <!-- Cover -->
+            <div class="book-page book-cover">
+                <div class="book-title">The Sun<br>and<br>Water</div>
+                <div class="page-illustration">☀️💧</div>
+                <div class="book-subtitle">A Garden Story</div>
+                <div class="page-number">Cover</div>
+            </div>
+
+            <!-- Page 1 -->
+            <div class="book-page page-sun">
+                <div class="page-illustration">☀️</div>
+                <div class="page-text">The sun.</div>
+                <div class="page-number">1</div>
+            </div>
+        </div>
+
+        <div class="divider">✂️ - - - - - - - - - - - - - - - - - - - - - - - - - - - - ✂️</div>
+
+        <div class="pages-grid">
+            <!-- Page 2 -->
+            <div class="book-page page-sun">
+                <div class="page-illustration">🔥</div>
+                <div class="page-text">The sun is hot.</div>
+                <div class="page-number">2</div>
+            </div>
+
+            <!-- Page 3 -->
+            <div class="book-page page-plant">
+                <div class="page-illustration">🪴</div>
+                <div class="page-text">The pot.</div>
+                <div class="page-number">3</div>
+            </div>
+        </div>
+
+        <div class="divider">✂️ - - - - - - - - - - - - - - - - - - - - - - - - - - - - ✂️</div>
+
+        <div class="pages-grid">
+            <!-- Page 4 -->
+            <div class="book-page page-sun">
+                <div class="page-illustration">🥵🪴</div>
+                <div class="page-text">The pot is hot.</div>
+                <div class="page-number">4</div>
+            </div>
+
+            <!-- Page 5 -->
+            <div class="book-page page-water">
+                <div class="page-illustration">💧🪴</div>
+                <div class="page-text">Wet the pot.</div>
+                <div class="page-number">5</div>
+            </div>
+        </div>
+
+        <div class="divider">✂️ - - - - - - - - - - - - - - - - - - - - - - - - - - - - ✂️</div>
+
+        <div class="pages-grid">
+            <!-- Page 6 -->
+            <div class="book-page page-water">
+                <div class="page-illustration">💧✅</div>
+                <div class="page-text">The pot is wet.</div>
+                <div class="page-number">6</div>
+            </div>
+
+            <!-- Page 7 -->
+            <div class="book-page page-plant">
+                <div class="page-illustration">🌱</div>
+                <div class="page-text">A bud!</div>
+                <div class="page-number">7</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

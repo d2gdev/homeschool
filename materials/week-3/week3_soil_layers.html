@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 - Soil Layers</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .layers-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--soil-dark);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        /* Cross-section visualization */
+        .cross-section-container {
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(to bottom,
+                    #E8F5E9 0%,
+                    #E8F5E9 15%,
+                    #EFEBE9 15%,
+                    #EFEBE9 35%,
+                    #D7CCC8 35%,
+                    #D7CCC8 60%,
+                    #BCAAA4 60%,
+                    #BCAAA4 85%,
+                    #A1887F 85%,
+                    #A1887F 100%);
+            border: 6px solid var(--soil-dark);
+            border-radius: 25px;
+            position: relative;
+            min-height: 600px;
+            box-shadow: 0 15px 50px rgba(62, 39, 35, 0.3);
+        }
+
+        /* Layer labels */
+        .layer-label {
+            position: absolute;
+            left: 30px;
+            font-family: var(--font-display);
+            font-size: 1.4em;
+            font-weight: 600;
+            padding: 10px 20px;
+            background: white;
+            border: 3px solid var(--compost-brown);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .label-grass {
+            top: 30px;
+            color: var(--organic-green);
+        }
+
+        .label-topsoil {
+            top: 140px;
+            color: var(--soil-rich);
+        }
+
+        .label-subsoil {
+            top: 300px;
+            color: var(--compost-brown);
+        }
+
+        .label-bedrock {
+            bottom: 80px;
+            color: var(--soil-dark);
+        }
+
+        /* Dotted divider lines */
+        .layer-divider {
+            position: absolute;
+            left: 0;
+            right: 0;
+            border-top: 3px dashed rgba(62, 39, 35, 0.5);
+        }
+
+        .divider-1 {
+            top: 15%;
+        }
+
+        .divider-2 {
+            top: 35%;
+        }
+
+        .divider-3 {
+            top: 60%;
+        }
+
+        .divider-4 {
+            top: 85%;
+        }
+
+        /* Drawing icons */
+        .layer-icon {
+            position: absolute;
+            right: 40px;
+            font-size: 3em;
+            opacity: 0.6;
+        }
+
+        .icon-grass {
+            top: 40px;
+        }
+
+        .icon-worm {
+            top: 200px;
+        }
+
+        .icon-roots {
+            top: 350px;
+        }
+
+        .icon-rock {
+            bottom: 90px;
+        }
+
+        .trace-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+            border: 5px solid var(--compost-brown);
+            border-radius: 25px;
+        }
+
+        .trace-title {
+            font-family: var(--font-display);
+            font-size: 1.8em;
+            color: var(--soil-dark);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .trace-word {
+            font-family: var(--font-earthy);
+            font-size: 4em;
+            color: rgba(121, 85, 72, 0.3);
+            text-align: center;
+            letter-spacing: 8px;
+            margin: 30px 0;
+            text-transform: lowercase;
+        }
+
+        .comparison-question {
+            margin-top: 40px;
+            padding: 25px;
+            background: white;
+            border: 4px solid var(--organic-green);
+            border-radius: 20px;
+        }
+
+        .question-text {
+            font-family: var(--font-display);
+            font-size: 1.5em;
+            color: var(--soil-dark);
+            margin-bottom: 15px;
+        }
+
+        .answer-options {
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--soil-dark);
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Soil Layers</button>
+
+    <div class="container">
+        <h1>🌍 What's Under the Ground?</h1>
+        <p class="layers-intro">
+            Monday's Discovery: Dig deep and see the layers of earth!<br>
+            Each layer is different! 🪱
+        </p>
+
+        <div class="cross-section-container">
+            <!-- Layer labels -->
+            <div class="layer-label label-grass">🌱 Grass & Plants</div>
+            <div class="layer-label label-topsoil">🟤 Top Soil (Dark & Rich)</div>
+            <div class="layer-label label-subsoil">🟫 Deeper Soil (Lighter)</div>
+            <div class="layer-label label-bedrock">🪨 Bedrock (Very Deep)</div>
+
+            <!-- Divider lines -->
+            <div class="layer-divider divider-1"></div>
+            <div class="layer-divider divider-2"></div>
+            <div class="layer-divider divider-3"></div>
+            <div class="layer-divider divider-4"></div>
+
+            <!-- Decorative icons -->
+            <div class="layer-icon icon-grass">🌿</div>
+            <div class="layer-icon icon-worm">🪱</div>
+            <div class="layer-icon icon-roots">🥕</div>
+            <div class="layer-icon icon-rock">🪨</div>
+        </div>
+
+        <div class="trace-section">
+            <div class="trace-title">✏️ Trace the Word:</div>
+            <div class="trace-word">soil</div>
+            <div
+                style="text-align: center; font-family: var(--font-playful); font-size: 1.1em; color: var(--compost-warm);">
+                (Parent writes in dotted letters, child traces)
+            </div>
+        </div>
+
+        <div class="comparison-question">
+            <div class="question-text">The top soil is...</div>
+            <div class="answer-options">
+                <div>⭕ darker</div>
+                <div>⭕ lighter</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

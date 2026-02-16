@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 - Drip System Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .comparison-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--water-deep);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .method-box-hand {
+            background: linear-gradient(to bottom, #E8F5E9 0%, #C8E6C9 100%);
+            border: 5px solid #66BB6A;
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 10px 35px rgba(102, 187, 106, 0.3);
+        }
+
+        .method-box-drip {
+            background: linear-gradient(to bottom, #E1F5FE 0%, #B3E5FC 100%);
+            border: 5px solid var(--drip-blue);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 10px 35px rgba(0, 188, 212, 0.3);
+        }
+
+        .method-title {
+            font-family: var(--font-display);
+            font-size: 2.2em;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .method-title-hand {
+            color: #66BB6A;
+        }
+
+        .method-title-drip {
+            color: var(--drip-blue);
+        }
+
+        .data-row {
+            margin: 20px 0;
+        }
+
+        .data-label {
+            font-family: var(--font-display);
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--water-deep);
+            margin-bottom: 8px;
+        }
+
+        .data-input {
+            background: white;
+            border: 3px solid var(--drip-blue);
+            border-radius: 10px;
+            padding: 12px;
+            font-family: var(--font-handwritten);
+            font-size: 1.2em;
+            color: var(--water-deep);
+        }
+
+        .circle-options {
+            font-family: var(--font-playful);
+            font-size: 1.1em;
+            color: var(--water-deep);
+            margin-top: 8px;
+        }
+
+        .winner-section {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #81D4FA 0%, #4FC3F7 100%);
+            border: 5px solid var(--drip-cyan);
+            border-radius: 25px;
+            padding: 35px;
+            margin-top: 30px;
+        }
+
+        .winner-title {
+            font-family: var(--font-display);
+            font-size: 2em;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .winner-answer {
+            background: white;
+            border: 3px dashed var(--drip-blue);
+            border-radius: 15px;
+            padding: 20px;
+            font-family: var(--font-handwritten);
+            font-size: 1.3em;
+            color: var(--water-deep);
+            min-height: 80px;
+        }
+
+        .design-section {
+            grid-column: 1 / -1;
+            background: white;
+            border: 5px solid var(--drip-blue);
+            border-radius: 25px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        .design-title {
+            font-family: var(--font-display);
+            font-size: 1.8em;
+            color: var(--drip-blue);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .design-box {
+            height: 250px;
+            background: linear-gradient(to bottom, #E1F5FE 0%, #B3E5FC 100%);
+            border: 3px dashed var(--drip-blue);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-playful);
+            font-size: 1.4em;
+            color: var(--water-bright);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Comparison Chart</button>
+    <div class="container">
+        <h1>🚰 Hand Watering vs Drip Watering</h1>
+        <p class="comparison-intro">Thursday-Friday: Compare both watering methods!<br>Which one works better? 💧</p>
+        <div class="comparison-grid">
+            <div class="method-box-hand">
+                <div class="method-title method-title-hand">🤚 Hand Watered</div>
+                <div class="data-row">
+                    <div class="data-label">Wet area width:</div>
+                    <div class="data-input">_____ cm</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">How even?</div>
+                    <div class="circle-options">⭕ even &nbsp;&nbsp; ⭕ patchy</div>
+                </div>
+            </div>
+            <div class="method-box-drip">
+                <div class="method-title method-title-drip">💧 Drip Watered</div>
+                <div class="data-row">
+                    <div class="data-label">Wet area width:</div>
+                    <div class="data-input">_____ cm</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">How even?</div>
+                    <div class="circle-options">⭕ even &nbsp;&nbsp; ⭕ patchy</div>
+                </div>
+            </div>
+            <div class="winner-section">
+                <div class="winner-title">🏆 Which is better?</div>
+                <div class="winner-answer">_______________________________________________</div>
+            </div>
+            <div class="design-section">
+                <div class="design-title">🎨 Draw Your Best Drip System!</div>
+                <div class="design-box">Draw your irrigation design here 💧</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

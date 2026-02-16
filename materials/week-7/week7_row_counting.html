@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 - Counting in Rows</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .counting-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--grid-deep);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .row-problem {
+            margin: 30px 0;
+            padding: 30px;
+            background: linear-gradient(135deg, #E8EAF6 0%, #C5CAE9 100%);
+            border: 5px solid var(--grid-bright);
+            border-radius: 25px;
+            box-shadow: 0 10px 35px rgba(92, 107, 192, 0.3);
+        }
+
+        .problem-equation {
+            font-family: var(--font-grid);
+            font-size: 2.5em;
+            color: var(--grid-deep);
+            text-align: center;
+            margin: 20px 0;
+            font-weight: 600;
+        }
+
+        .circle-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .circle {
+            width: 60px;
+            height: 60px;
+            border: 4px solid var(--grid-bright);
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            box-shadow: 0 4px 15px rgba(92, 107, 192, 0.2);
+        }
+
+        .row-divider {
+            width: 100%;
+            height: 3px;
+            background: var(--grid-bright);
+            margin: 15px 0;
+            border-radius: 2px;
+        }
+
+        .answer-section {
+            margin-top: 25px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            border: 3px dashed var(--grid-bright);
+        }
+
+        .answer-label {
+            font-family: var(--font-display);
+            font-size: 1.4em;
+            color: var(--grid-deep);
+            text-align: center;
+        }
+
+        .answer-blank {
+            border-bottom: 3px solid var(--grid-bright);
+            display: inline-block;
+            min-width: 80px;
+            padding: 5px 10px;
+            margin: 0 5px;
+            font-family: var(--font-handwritten);
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Row Counter</button>
+    <div class="container">
+        <h1>🔢 Counting in Rows</h1>
+        <p class="counting-intro">Monday-Thursday: Fill in the circles and count!<br>Learn how rows make arrays! ⊞</p>
+
+        <div class="row-problem">
+            <div class="problem-equation">2 rows of 4 = ?</div>
+            <div class="circle-row">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="row-divider"></div>
+            <div class="circle-row">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="answer-section">
+                <div class="answer-label">2 rows of 4 = <span class="answer-blank">_____</span> total</div>
+            </div>
+        </div>
+
+        <div class="row-problem">
+            <div class="problem-equation">3 rows of 3 = ?</div>
+            <div class="circle-row">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="row-divider"></div>
+            <div class="circle-row">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="row-divider"></div>
+            <div class="circle-row">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="answer-section">
+                <div class="answer-label">3 rows of 3 = <span class="answer-blank">_____</span> total</div>
+            </div>
+        </div>
+
+        <div class="row-problem">
+            <div class="problem-equation">2 rows of 5 = ?</div>
+            <div class="circle-row">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="row-divider"></div>
+            <div class="circle-row">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="answer-section">
+                <div class="answer-label">2 rows of 5 = <span class="answer-blank">_____</span> total</div>
+            </div>
+        </div>
+
+        <div class="row-problem">
+            <div class="problem-equation">4 rows of 2 = ?</div>
+            <div class="circle-row">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="row-divider"></div>
+            <div class="circle-row">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="row-divider"></div>
+            <div class="circle-row">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="row-divider"></div>
+            <div class="circle-row">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="answer-section">
+                <div class="answer-label">4 rows of 2 = <span class="answer-blank">_____</span> total</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

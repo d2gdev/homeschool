@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 - Weekly Grid Summary</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .summary-page {
+            background: linear-gradient(to bottom, #E8EAF6 0%, #C5CAE9 50%, #9FA8DA 100%);
+            border: 8px double var(--grid-bright);
+            border-radius: 30px;
+            padding: 50px;
+            min-height: 850px;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(92, 107, 192, 0.35);
+        }
+
+        .summary-page::before {
+            content: '⊞';
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 4em;
+        }
+
+        .summary-page::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: linear-gradient(to right, var(--row-orange) 0%, var(--grid-bright) 50%, var(--array-purple) 100%);
+            border-radius: 0 0 25px 25px;
+        }
+
+        .week-badge {
+            text-align: center;
+            margin: 60px 0 30px 0;
+        }
+
+        .week-title {
+            font-family: var(--font-display);
+            font-size: 1.8em;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(135deg, var(--grid-bright) 0%, var(--grid-medium) 100%);
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 50px;
+            border: 4px solid var(--grid-deep);
+            box-shadow: 0 8px 25px rgba(92, 107, 192, 0.3);
+        }
+
+        .scribe-section {
+            background: white;
+            border: 4px solid var(--grid-bright);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            min-height: 220px;
+            position: relative;
+        }
+
+        .scribe-section::before {
+            content: '📝';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 2em;
+            opacity: 0.3;
+        }
+
+        .scribe-label {
+            font-family: var(--font-display);
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--grid-bright);
+            margin-bottom: 20px;
+        }
+
+        .scribe-lines {
+            font-family: var(--font-handwritten);
+            font-size: 1.3em;
+            line-height: 2.5em;
+            color: var(--grid-deep);
+        }
+
+        .scribe-line {
+            border-bottom: 2px solid #E0E0E0;
+            margin: 10px 0;
+            padding: 5px 0;
+        }
+
+        .copy-section {
+            background: linear-gradient(135deg, #FFCC80 0%, #FFB74D 100%);
+            border: 5px solid var(--row-orange);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .highlight-label {
+            font-family: var(--font-display);
+            font-size: 1.4em;
+            font-weight: 600;
+            color: white;
+            background: var(--grid-deep);
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+        }
+
+        .model-sentence {
+            font-family: var(--font-grid);
+            font-size: 2.2em;
+            color: var(--grid-deep);
+            text-align: center;
+            margin: 25px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+        }
+
+        .practice-line {
+            border-bottom: 3px dashed white;
+            height: 60px;
+            margin: 25px 0;
+            position: relative;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        .practice-line::before {
+            content: '✏️ Write here';
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            font-family: var(--font-playful);
+            font-size: 1.1em;
+            color: var(--grid-deep);
+            opacity: 0.7;
+        }
+
+        .drawing-section {
+            background: white;
+            border: 4px solid var(--grid-bright);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .drawing-box-large {
+            height: 250px;
+            background:
+                repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(92, 107, 192, 0.2) 39px, rgba(92, 107, 192, 0.2) 40px),
+                repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(92, 107, 192, 0.2) 39px, rgba(92, 107, 192, 0.2) 40px),
+                #E8EAF6;
+            border: 3px dashed var(--grid-bright);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-playful);
+            font-size: 1.4em;
+            color: var(--grid-medium);
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Friday Summary</button>
+    <div class="container">
+        <div class="summary-page">
+            <h1 style="color: white; text-shadow: 3px 3px 0 rgba(40, 53, 147, 0.5);">🌟 This Week I Learned...</h1>
+            <div class="week-badge">
+                <div class="week-title">Week 7: Garden Grid</div>
+            </div>
+            <div class="scribe-section">
+                <div class="scribe-label">What did you learn about rows and arrays? (Parent writes what child says)
+                </div>
+                <div class="scribe-lines">
+                    <div class="scribe-line">_________________________________________________________</div>
+                    <div class="scribe-line">_________________________________________________________</div>
+                    <div class="scribe-line">_________________________________________________________</div>
+                    <div class="scribe-line">_________________________________________________________</div>
+                </div>
+            </div>
+            <div class="copy-section">
+                <div class="highlight-label">✨ Copy This Sentence:</div>
+                <div class="model-sentence">Plants grow in rows.</div>
+                <div class="practice-line"></div>
+            </div>
+            <div class="drawing-section">
+                <div class="scribe-label" style="color: var(--grid-bright);">🎨 Draw Your Garden Grid!</div>
+                <div class="drawing-box-large">Draw here! ⊞</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

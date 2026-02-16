@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 - Plant Growth Chart</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .chart-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--soil-deep);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        /* Organic growth visualization */
+        .growth-chart-container {
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(to bottom,
+                    #E3F2FD 0%,
+                    #E3F2FD 20%,
+                    #FFF9C4 20%,
+                    #FFF9C4 80%,
+                    #EFEBE9 80%,
+                    #EFEBE9 100%);
+            border-radius: 25px;
+            border: 5px solid var(--earth-warm);
+            position: relative;
+        }
+
+        .chart-title {
+            font-family: var(--font-display);
+            font-size: 2em;
+            color: var(--leaf-vibrant);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .chart-area {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 500px;
+            position: relative;
+            padding: 0 20px;
+            border-left: 4px solid var(--soil-deep);
+            border-bottom: 4px solid var(--soil-deep);
+        }
+
+        /* Y-axis with organic styling */
+        .y-axis {
+            position: absolute;
+            left: -50px;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: var(--soil-deep);
+        }
+
+        .y-label {
+            font-size: 1.1em;
+            padding: 5px;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid var(--leaf-vibrant);
+        }
+
+        /* Grid lines with natural styling */
+        .grid-lines {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            pointer-events: none;
+        }
+
+        .grid-line {
+            width: 100%;
+            border-top: 1px dashed rgba(141, 110, 99, 0.3);
+        }
+
+        .grid-line-major {
+            border-top: 2px solid rgba(46, 125, 50, 0.3);
+        }
+
+        /* Plant-shaped bar columns */
+        .bar-column {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+        }
+
+        .bar-fill-area {
+            width: 80%;
+            height: 100%;
+            background: white;
+            border: 4px solid var(--leaf-vibrant);
+            border-bottom: none;
+            border-radius: 20px 20px 0 0;
+            position: relative;
+            box-shadow: inset 0 0 20px rgba(129, 199, 132, 0.1);
+        }
+
+        .bar-fill-area::before {
+            content: '🌱';
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2em;
+        }
+
+        .bar-a {
+            border-color: var(--water-clear);
+            background: linear-gradient(to top, #E1F5FE 0%, #B3E5FC 100%);
+        }
+
+        .bar-b {
+            border-color: #D32F2F;
+            background: linear-gradient(to top, #FFEBEE 0%, #FFCDD2 100%);
+        }
+
+        .bar-c {
+            border-color: #757575;
+            background: linear-gradient(to top, #ECEFF1 0%, #CFD8DC 100%);
+        }
+
+        .x-label {
+            margin-top: 20px;
+            text-align: center;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.2em;
+            color: var(--soil-deep);
+        }
+
+        .x-sublabel {
+            font-family: var(--font-playful);
+            font-size: 0.9em;
+            color: var(--earth-warm);
+            margin-top: 5px;
+        }
+
+        .coloring-instructions {
+            margin-top: 40px;
+            padding: 25px;
+            background: #FFF9C4;
+            border-radius: 20px;
+            border: 3px dashed var(--sun-golden);
+        }
+
+        .instructions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .instruction-item {
+            font-family: var(--font-playful);
+            font-size: 1.1em;
+            color: var(--soil-deep);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Growth Chart</button>
+
+    <div class="container">
+        <h1>📊 Plant Growth Garden Chart</h1>
+        <p class="chart-intro">
+            Color in each plant's bar to show how tall it grew!<br>
+            Each line = 1 centimeter of growth 🌱
+        </p>
+
+        <div class="growth-chart-container">
+            <div class="chart-title">How Tall Did Our Plants Grow?</div>
+
+            <div class="chart-area">
+                <!-- Y-axis labels -->
+                <div class="y-axis">
+                    <div class="y-label">0</div>
+                    <div class="y-label">3</div>
+                    <div class="y-label">6</div>
+                    <div class="y-label">9</div>
+                    <div class="y-label">12</div>
+                    <div class="y-label">15 cm</div>
+                </div>
+
+                <!-- Grid lines -->
+                <div class="grid-lines">
+                    <div class="grid-line grid-line-major"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line grid-line-major"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line grid-line-major"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line grid-line-major"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line grid-line-major"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line grid-line-major"></div>
+                </div>
+
+                <!-- Plant A Bar -->
+                <div class="bar-column">
+                    <div class="bar-fill-area bar-a"></div>
+                    <div class="x-label">
+                        Plant A
+                        <div class="x-sublabel">💧 + ☀️</div>
+                    </div>
+                </div>
+
+                <!-- Plant B Bar -->
+                <div class="bar-column">
+                    <div class="bar-fill-area bar-b"></div>
+                    <div class="x-label">
+                        Plant B
+                        <div class="x-sublabel">🚫 💧</div>
+                    </div>
+                </div>
+
+                <!-- Plant C Bar -->
+                <div class="bar-column">
+                    <div class="bar-fill-area bar-c"></div>
+                    <div class="x-label">
+                        Plant C
+                        <div class="x-sublabel">☁️ Shade</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="coloring-instructions">
+            <h3 style="font-family: var(--font-display); color: var(--soil-deep); margin-bottom: 15px;">
+                🎨 How to Color Your Chart
+            </h3>
+            <div class="instructions-grid">
+                <div class="instruction-item">
+                    <span style="font-size: 2em;">1️⃣</span>
+                    <span>Measure each plant on Friday</span>
+                </div>
+                <div class="instruction-item">
+                    <span style="font-size: 2em;">2️⃣</span>
+                    <span>Count the lines (each = 1 cm)</span>
+                </div>
+                <div class="instruction-item">
+                    <span style="font-size: 2em;">3️⃣</span>
+                    <span>Color up to that height</span>
+                </div>
+                <div class="instruction-item">
+                    <span style="font-size: 2em;">4️⃣</span>
+                    <span>Compare which grew tallest!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

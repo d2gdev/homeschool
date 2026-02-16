@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 - Daily Growth Journal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .journal-page {
+            background: white;
+            border: 6px solid var(--growth-bright);
+            border-radius: 25px;
+            padding: 40px;
+            min-height: 900px;
+            position: relative;
+            box-shadow: 0 12px 45px rgba(67, 160, 71, 0.3);
+        }
+
+        .journal-page::before,
+        .journal-page::after {
+            content: '🌱';
+            position: absolute;
+            font-size: 3em;
+            opacity: 0.2;
+        }
+
+        .journal-page::before {
+            top: 20px;
+            left: 20px;
+        }
+
+        .journal-page::after {
+            bottom: 20px;
+            right: 20px;
+            content: '📏';
+        }
+
+        .date-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--growth-bright);
+            margin-bottom: 30px;
+        }
+
+        .date-field {
+            font-family: var(--font-handwritten);
+            font-size: 1.5em;
+            color: var(--growth-deep);
+        }
+
+        .date-input {
+            border-bottom: 2px solid var(--growth-bright);
+            padding: 5px 15px;
+            min-width: 150px;
+            display: inline-block;
+        }
+
+        .observation-drawing {
+            height: 400px;
+            background: linear-gradient(to bottom, #E8F5E9 0%, #C8E6C9 50%, #A5D6A7 100%);
+            border: 4px dashed var(--growth-bright);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .observation-drawing::before {
+            content: 'Draw your plant today (measure how tall!)';
+            font-family: var(--font-playful);
+            font-size: 1.4em;
+            color: var(--growth-medium);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .observation-drawing::after {
+            content: '📏';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 2.5em;
+            opacity: 0.3;
+        }
+
+        .writing-section {
+            margin-top: 40px;
+        }
+
+        .prompt-line {
+            margin: 25px 0;
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+        }
+
+        .prompt-label {
+            font-family: var(--font-display);
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--growth-bright);
+            min-width: 180px;
+            flex-shrink: 0;
+        }
+
+        .prompt-answer {
+            flex-grow: 1;
+            border-bottom: 2px solid var(--growth-bright);
+            padding: 10px 0;
+            font-family: var(--font-handwritten);
+            font-size: 1.2em;
+            color: var(--growth-deep);
+        }
+
+        .word-highlight-box {
+            margin-top: 40px;
+            padding: 25px;
+            background: linear-gradient(135deg, #A5D6A7 0%, #81C784 100%);
+            border: 4px solid var(--mature-green);
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .word-highlight-box .prompt-label {
+            display: block;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .word-box {
+            background: white;
+            border: 3px dashed var(--growth-bright);
+            border-radius: 15px;
+            padding: 20px;
+            font-family: var(--font-display);
+            font-size: 2.5em;
+            font-weight: 600;
+            color: var(--growth-deep);
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mood-tracker {
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--growth-deep);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .mood-tracker span {
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Journal (Make 5 copies for Week 6)</button>
+    <div class="container">
+        <div class="journal-page">
+            <div class="date-header">
+                <div class="date-field">Week <span class="date-input">__6__</span></div>
+                <div class="date-field">Day <span class="date-input">_____</span></div>
+                <div class="date-field">Date <span class="date-input">_______________</span></div>
+            </div>
+            <div class="observation-drawing"></div>
+            <div class="writing-section">
+                <div class="prompt-line"><span class="prompt-label">Height today:</span><span
+                        class="prompt-answer">_____ cm</span></div>
+                <div class="prompt-line"><span class="prompt-label">I noticed:</span><span
+                        class="prompt-answer">_____________________________________________</span></div>
+                <div class="prompt-line"><span class="prompt-label"></span><span
+                        class="prompt-answer">_____________________________________________</span></div>
+                <div class="prompt-line"><span class="prompt-label"></span><span
+                        class="prompt-answer">_____________________________________________</span></div>
+            </div>
+            <div class="word-highlight-box">
+                <span class="prompt-label">🌟 My Growth Word Today:</span>
+                <div class="word-box">(tall or grow)</div>
+            </div>
+            <div class="mood-tracker">My Garden Mood: <span>😊</span><span>😐</span><span>😔</span></div>
+        </div>
+    </div>
+</body>
+
+</html>

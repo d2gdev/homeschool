@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 - Daily Height Tracking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tracking-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--growth-deep);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .tracking-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 40px 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 45px rgba(67, 160, 71, 0.3);
+        }
+
+        .tracking-table th {
+            background: linear-gradient(135deg, var(--growth-bright) 0%, var(--growth-medium) 100%);
+            color: white;
+            padding: 20px;
+            font-family: var(--font-display);
+            font-size: 1.2em;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .tracking-table td {
+            padding: 20px;
+            border-bottom: 3px solid #E8F5E9;
+            background: white;
+            text-align: center;
+        }
+
+        .tracking-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .day-cell {
+            font-family: var(--font-display);
+            font-size: 1.4em;
+            font-weight: 600;
+            color: var(--growth-bright);
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%) !important;
+        }
+
+        .drawing-cell {
+            height: 150px;
+            background: linear-gradient(to bottom, #E8F5E9 0%, #C8E6C9 100%) !important;
+            border: 3px dashed var(--growth-bright);
+        }
+
+        .measurement-field {
+            font-family: var(--font-handwritten);
+            font-size: 1.1em;
+            color: var(--growth-deep);
+            margin: 8px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Height Tracker</button>
+    <div class="container">
+        <h1>📏 How Tall Is My Plant?</h1>
+        <p class="tracking-intro">Week 6: Measure and draw your plant every day!<br>Watch it grow taller! 🌱📈</p>
+        <table class="tracking-table">
+            <thead>
+                <tr>
+                    <th style="width: 15%;">Day</th>
+                    <th style="width: 40%;">Draw the Plant</th>
+                    <th>Measurements</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day-cell">Monday</td>
+                    <td class="drawing-cell"></td>
+                    <td>
+                        <div class="measurement-field">Height: _____ cm</div>
+                        <div class="measurement-field">Leaves: _____</div>
+                        <div class="measurement-field">Change: _____ cm</div>
+                        <div class="measurement-field">⭕ taller ⭕ same ⭕ shorter</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="day-cell">Tuesday</td>
+                    <td class="drawing-cell"></td>
+                    <td>
+                        <div class="measurement-field">Height: _____ cm</div>
+                        <div class="measurement-field">Leaves: _____</div>
+                        <div class="measurement-field">Change: _____ cm</div>
+                        <div class="measurement-field">⭕ taller ⭕ same ⭕ shorter</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="day-cell">Wednesday</td>
+                    <td class="drawing-cell"></td>
+                    <td>
+                        <div class="measurement-field">Height: _____ cm</div>
+                        <div class="measurement-field">Leaves: _____</div>
+                        <div class="measurement-field">Change: _____ cm</div>
+                        <div class="measurement-field">⭕ taller ⭕ same ⭕ shorter</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="day-cell">Thursday</td>
+                    <td class="drawing-cell"></td>
+                    <td>
+                        <div class="measurement-field">Height: _____ cm</div>
+                        <div class="measurement-field">Leaves: _____</div>
+                        <div class="measurement-field">Change: _____ cm</div>
+                        <div class="measurement-field">⭕ taller ⭕ same ⭕ shorter</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="day-cell">Friday</td>
+                    <td class="drawing-cell"></td>
+                    <td>
+                        <div class="measurement-field">Height: _____ cm</div>
+                        <div class="measurement-field">Leaves: _____</div>
+                        <div class="measurement-field">Change: _____ cm</div>
+                        <div class="measurement-field">⭕ taller ⭕ same ⭕ shorter</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Plant Grows - Week 6 Reader</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .book-instructions {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--growth-deep);
+            margin: 30px 0;
+            padding: 25px;
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+            border-radius: 20px;
+            border: 4px solid var(--growth-bright);
+        }
+
+        .pages-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .book-page {
+            background: white;
+            border: 6px solid var(--growth-bright);
+            border-radius: 25px;
+            padding: 40px;
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 35px rgba(67, 160, 71, 0.3);
+            page-break-inside: avoid;
+        }
+
+        .book-page::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 15px;
+            background: linear-gradient(to right, var(--sprout-yellow) 0%, var(--growth-bright) 50%, var(--mature-green) 100%);
+            border-radius: 0 0 20px 20px;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 30px;
+            right: 25px;
+            font-family: var(--font-display);
+            font-size: 1.2em;
+            color: white;
+            background: var(--growth-bright);
+            padding: 8px 20px;
+            border-radius: 25px;
+            box-shadow: 0 3px 10px rgba(67, 160, 71, 0.4);
+        }
+
+        .book-cover {
+            background: linear-gradient(to bottom, #E8F5E9 0%, #C8E6C9 100%);
+            border-color: var(--growth-deep);
+        }
+
+        .book-title {
+            font-family: var(--font-display);
+            font-size: 3.5em;
+            font-weight: 600;
+            color: var(--growth-deep);
+            margin: 25px 0;
+            text-shadow: 3px 3px 0 rgba(165, 214, 167, 0.3);
+        }
+
+        .book-subtitle {
+            font-family: var(--font-growth);
+            font-size: 1.5em;
+            color: var(--growth-bright);
+            margin-top: 20px;
+        }
+
+        .page-illustration {
+            font-size: 7em;
+            margin: 35px 0;
+            filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.2));
+        }
+
+        .page-text {
+            font-family: var(--font-growth);
+            font-size: 2.8em;
+            color: var(--growth-deep);
+            line-height: 1.5;
+            margin: 25px 0;
+        }
+
+        .page-short {
+            background: linear-gradient(to bottom, #FFF9C4 0%, white 100%);
+        }
+
+        .page-grow {
+            background: linear-gradient(to bottom, #C8E6C9 0%, white 100%);
+        }
+
+        .page-tall {
+            background: linear-gradient(to bottom, #A5D6A7 0%, white 100%);
+        }
+
+        .page-time {
+            background: linear-gradient(to bottom, #E1BEE7 0%, white 100%);
+        }
+
+        .divider {
+            grid-column: 1 / -1;
+            text-align: center;
+            font-size: 1.8em;
+            color: var(--growth-bright);
+            margin: 25px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Growth Reader</button>
+    <div class="container">
+        <h1>📚 Week 6 Growth Reader</h1>
+        <div class="book-instructions"><strong>🌱 Making Your Book:</strong> Print these pages. Cut along borders. Stack
+            in number order. Staple the left edge. Read together every day to learn about growth! 📏</div>
+        <div class="pages-grid">
+            <div class="book-page book-cover">
+                <div class="book-title">The Plant<br>Grows</div>
+                <div class="page-illustration">🌱</div>
+                <div class="book-subtitle">A Story of Time</div>
+                <div class="page-number">Cover</div>
+            </div>
+            <div class="book-page page-short">
+                <div class="page-illustration">🌱</div>
+                <div class="page-text">A short plant.</div>
+                <div class="page-number">1</div>
+            </div>
+        </div>
+        <div class="divider">✂️ - - - - - - - - - - - - - - - - - - - - - - - - - - - - ✂️</div>
+        <div class="pages-grid">
+            <div class="book-page page-time">
+                <div class="page-illustration">🕐 🌱</div>
+                <div class="page-text">Time passes.</div>
+                <div class="page-number">2</div>
+            </div>
+            <div class="book-page page-grow">
+                <div class="page-illustration">📈 🌿</div>
+                <div class="page-text">The plant<br>grows!</div>
+                <div class="page-number">3</div>
+            </div>
+        </div>
+        <div class="divider">✂️ - - - - - - - - - - - - - - - - - - - - - - - - - - - - ✂️</div>
+        <div class="pages-grid">
+            <div class="book-page page-time">
+                <div class="page-illustration">🕐 🕐</div>
+                <div class="page-text">More time<br>passes.</div>
+                <div class="page-number">4</div>
+            </div>
+            <div class="book-page page-grow">
+                <div class="page-illustration">🌿 ⬆️</div>
+                <div class="page-text">It grows<br>more!</div>
+                <div class="page-number">5</div>
+            </div>
+        </div>
+        <div class="divider">✂️ - - - - - - - - - - - - - - - - - - - - - - - - - - - - ✂️</div>
+        <div class="pages-grid">
+            <div class="book-page page-tall">
+                <div class="page-illustration">🌳</div>
+                <div class="page-text">Now it is<br>tall!</div>
+                <div class="page-number">6</div>
+            </div>
+            <div class="book-page page-grow">
+                <div class="page-illustration">⏰ 📏</div>
+                <div class="page-text">Growth<br>takes time!</div>
+                <div class="page-number">End</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

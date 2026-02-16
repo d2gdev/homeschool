@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 - Bug Graph</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .graph-container {
+            width: 100%;
+            height: 500px;
+            border-left: 5px solid var(--soil-rich);
+            border-bottom: 5px solid var(--soil-rich);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px 40px;
+            margin-top: 50px;
+        }
+
+        .graph-column {
+            flex: 1;
+            height: 100%;
+            border-right: 1px dotted #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+        }
+
+        .graph-bar {
+            width: 40px;
+            border-radius: 5px 5px 0 0;
+            background: #E0E0E0;
+            /* To be colored */
+            border: 2px solid #999;
+        }
+
+        .y-axis {
+            position: absolute;
+            left: -40px;
+            height: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+        }
+
+        .grid-line {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            position: absolute;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .x-label {
+            margin-top: 10px;
+            font-family: var(--font-handwritten);
+            font-size: 1.2em;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Bug Graph</button>
+    <div class="container">
+        <h1>🐞 Bugs in Our Garden</h1>
+        <p style="text-align: center;">Use your tally sheet from the week!</p>
+
+        <div style="position: relative; margin-left: 40px;"> <!-- Wrapper for axis labels -->
+            <div class="y-axis" style="height: 500px; top: 50px;">
+                <span>5</span><span>4</span><span>3</span><span>2</span><span>1</span><span>0</span>
+            </div>
+
+            <div class="graph-container">
+                <!-- Grid lines (approximate positioning for 5 units) -->
+                <div style="position: absolute; bottom: 83px; left:0; right:0; border-top: 1px dashed #ccc;"></div>
+                <!-- 1 -->
+                <div style="position: absolute; bottom: 166px; left:0; right:0; border-top: 1px dashed #ccc;"></div>
+                <!-- 2 -->
+                <div style="position: absolute; bottom: 249px; left:0; right:0; border-top: 1px dashed #ccc;"></div>
+                <!-- 3 -->
+                <div style="position: absolute; bottom: 332px; left:0; right:0; border-top: 1px dashed #ccc;"></div>
+                <!-- 4 -->
+                <div style="position: absolute; bottom: 415px; left:0; right:0; border-top: 1px dashed #ccc;"></div>
+                <!-- 5 -->
+
+                <div class="graph-column">
+                    <div class="graph-bar" style="height: 10px;"></div> <!-- Start small -->
+                    <div class="x-label">Ant 🐜</div>
+                </div>
+                <div class="graph-column">
+                    <div class="graph-bar" style="height: 10px;"></div>
+                    <div class="x-label">Beetle 🪲</div>
+                </div>
+                <div class="graph-column">
+                    <div class="graph-bar" style="height: 10px;"></div>
+                    <div class="x-label">Worm 🪱</div>
+                </div>
+                <div class="graph-column">
+                    <div class="graph-bar" style="height: 10px;"></div>
+                    <div class="x-label">Spider 🕷️</div>
+                </div>
+                <div class="graph-column">
+                    <div class="graph-bar" style="height: 10px;"></div>
+                    <div class="x-label">Other</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center; font-family: var(--font-handwritten);">
+            Color in the bars up to the right number! 🖍️
+        </div>
+    </div>
+</body>
+
+</html>

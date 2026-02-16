@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 11 - Weather Chart</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .weather-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .weather-cell {
+            flex: 1;
+            border: 1px solid #CFD8DC;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            background: white;
+            font-size: 0.9em;
+        }
+
+        .icon-select {
+            display: flex;
+            justify-content: space-around;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .feel-select {
+            margin: 10px 0;
+            font-size: 0.8em;
+            font-weight: bold;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
+
+        .feel-btn {
+            border: 1px solid #ccc;
+            padding: 2px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .height-input {
+            border-top: 1px dashed #ccc;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Weather Chart</button>
+    <div class="container">
+        <h1>📅 My Weekly Weather</h1>
+        <p style="text-align: center; font-family: var(--font-clean);">Track the weather every day!</p>
+
+        <div class="weather-row">
+            <!-- Monday -->
+            <div class="weather-cell">
+                <div class="day-header">Monday</div>
+                <div class="draw-box">Draw here</div>
+                <div class="icon-select">
+                    <span>☀️</span><span>☁️</span><span>🌧️</span>
+                </div>
+                <div class="feel-select">
+                    <span class="feel-btn" style="color:red">Hot</span>
+                    <span class="feel-btn" style="color:orange">Warm</span>
+                    <span class="feel-btn" style="color:cyan">Cool</span>
+                    <span class="feel-btn" style="color:blue">Cold</span>
+                </div>
+                <div class="height-input">
+                    Plant: <br>_____ cm
+                </div>
+            </div>
+
+            <!-- Tuesday -->
+            <div class="weather-cell">
+                <div class="day-header">Tuesday</div>
+                <div class="draw-box">Draw here</div>
+                <div class="icon-select">
+                    <span>☀️</span><span>☁️</span><span>🌧️</span>
+                </div>
+                <div class="feel-select">
+                    <span class="feel-btn" style="color:red">Hot</span>
+                    <span class="feel-btn" style="color:orange">Warm</span>
+                    <span class="feel-btn" style="color:cyan">Cool</span>
+                    <span class="feel-btn" style="color:blue">Cold</span>
+                </div>
+                <div class="height-input">
+                    Plant: <br>_____ cm
+                </div>
+            </div>
+
+            <!-- Wednesday -->
+            <div class="weather-cell">
+                <div class="day-header">Wednesday</div>
+                <div class="draw-box">Draw here</div>
+                <div class="icon-select">
+                    <span>☀️</span><span>☁️</span><span>🌧️</span>
+                </div>
+                <div class="feel-select">
+                    <span class="feel-btn" style="color:red">Hot</span>
+                    <span class="feel-btn" style="color:orange">Warm</span>
+                    <span class="feel-btn" style="color:cyan">Cool</span>
+                    <span class="feel-btn" style="color:blue">Cold</span>
+                </div>
+                <div class="height-input">
+                    Plant: <br>_____ cm
+                </div>
+            </div>
+
+            <!-- Thursday -->
+            <div class="weather-cell">
+                <div class="day-header">Thursday</div>
+                <div class="draw-box">Draw here</div>
+                <div class="icon-select">
+                    <span>☀️</span><span>☁️</span><span>🌧️</span>
+                </div>
+                <div class="feel-select">
+                    <span class="feel-btn" style="color:red">Hot</span>
+                    <span class="feel-btn" style="color:orange">Warm</span>
+                    <span class="feel-btn" style="color:cyan">Cool</span>
+                    <span class="feel-btn" style="color:blue">Cold</span>
+                </div>
+                <div class="height-input">
+                    Plant: <br>_____ cm
+                </div>
+            </div>
+
+            <!-- Friday -->
+            <div class="weather-cell">
+                <div class="day-header">Friday</div>
+                <div class="draw-box">Draw here</div>
+                <div class="icon-select">
+                    <span>☀️</span><span>☁️</span><span>🌧️</span>
+                </div>
+                <div class="feel-select">
+                    <span class="feel-btn" style="color:red">Hot</span>
+                    <span class="feel-btn" style="color:orange">Warm</span>
+                    <span class="feel-btn" style="color:cyan">Cool</span>
+                    <span class="feel-btn" style="color:blue">Cold</span>
+                </div>
+                <div class="height-input">
+                    Plant: <br>_____ cm
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

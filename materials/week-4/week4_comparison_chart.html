@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 - Thursday Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .comparison-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--vein-green);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .plant-box-sun {
+            background: linear-gradient(to bottom, #FFFDE7 0%, #FFF9C4 100%);
+            border: 5px solid var(--sun-gold);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 10px 35px rgba(255, 235, 59, 0.3);
+        }
+
+        .plant-box-shade {
+            background: linear-gradient(to bottom, #ECEFF1 0%, #CFD8DC 100%);
+            border: 5px solid var(--shadow-cool);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 10px 35px rgba(176, 190, 197, 0.3);
+        }
+
+        .plant-title {
+            font-family: var(--font-display);
+            font-size: 2.2em;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .plant-title-sun {
+            color: var(--sun-gold);
+        }
+
+        .plant-title-shade {
+            color: var(--shadow-deep);
+        }
+
+        .data-row {
+            margin: 20px 0;
+        }
+
+        .data-label {
+            font-family: var(--font-display);
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--vein-green);
+            margin-bottom: 8px;
+        }
+
+        .data-input {
+            background: white;
+            border: 3px solid var(--leaf-bright);
+            border-radius: 10px;
+            padding: 12px;
+            font-family: var(--font-handwritten);
+            font-size: 1.2em;
+            color: var(--vein-green);
+        }
+
+        .circle-options {
+            font-family: var(--font-playful);
+            font-size: 1.1em;
+            color: var(--vein-green);
+            margin-top: 8px;
+        }
+
+        .conclusion-section {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%);
+            border: 5px solid var(--leaf-bright);
+            border-radius: 25px;
+            padding: 35px;
+            margin-top: 30px;
+        }
+
+        .conclusion-title {
+            font-family: var(--font-display);
+            font-size: 2em;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .conclusion-answer {
+            background: white;
+            border: 3px dashed var(--chlorophyll);
+            border-radius: 15px;
+            padding: 25px;
+            font-family: var(--font-handwritten);
+            font-size: 1.5em;
+            color: var(--vein-green);
+            min-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Thursday Comparison</button>
+    <div class="container">
+        <h1>📊 Sun Plant vs Shade Plant</h1>
+        <p class="comparison-intro">Thursday Check: Compare both plants in detail!<br>What differences do you see? ☀️🌑
+        </p>
+        <div class="comparison-grid">
+            <div class="plant-box-sun">
+                <div class="plant-title plant-title-sun">☀️ Sun Plant</div>
+                <div class="data-row">
+                    <div class="data-label">Height:</div>
+                    <div class="data-input">_____ cm</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Leaves:</div>
+                    <div class="data-input">_____</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Color:</div>
+                    <div class="data-input">_______________</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Leaning?</div>
+                    <div class="circle-options">⭕ Yes &nbsp;&nbsp; ⭕ No</div>
+                </div>
+            </div>
+            <div class="plant-box-shade">
+                <div class="plant-title plant-title-shade">🌑 Shade Plant</div>
+                <div class="data-row">
+                    <div class="data-label">Height:</div>
+                    <div class="data-input">_____ cm</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Leaves:</div>
+                    <div class="data-input">_____</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Color:</div>
+                    <div class="data-input">_______________</div>
+                </div>
+                <div class="data-row">
+                    <div class="data-label">Leaning?</div>
+                    <div class="circle-options">⭕ Yes &nbsp;&nbsp; ⭕ No</div>
+                </div>
+            </div>
+            <div class="conclusion-section">
+                <div class="conclusion-title">🌱 Which plant grew more and why?</div>
+                <div class="conclusion-answer">(Parent writes what child says)</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

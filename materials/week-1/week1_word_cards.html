@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 - Garden Word Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .subtitle {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.4em;
+            color: var(--earth-warm);
+            margin-bottom: 40px;
+        }
+
+        /* Unique styling for each word based on its nature */
+        .card-sun {
+            border-color: var(--sun-golden);
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
+        }
+
+        .card-water {
+            border-color: var(--water-clear);
+            background: linear-gradient(135deg, #E1F5FE 0%, #B3E5FC 100%);
+        }
+
+        .card-plant {
+            border-color: var(--leaf-vibrant);
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+        }
+
+        .card-soil {
+            border-color: var(--soil-rich);
+            background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+        }
+
+        .card-grow {
+            border-color: var(--stem-fresh);
+            background: linear-gradient(135deg, #F1F8E9 0%, #DCEDC8 100%);
+        }
+
+        .card-back-hint {
+            font-family: var(--font-playful);
+            font-size: 0.9em;
+            color: var(--earth-warm);
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        .instruction-box {
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+            border-left: 6px solid var(--leaf-vibrant);
+            padding: 20px 30px;
+            margin: 30px 0;
+            border-radius: 15px;
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--soil-deep);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Garden Words</button>
+
+    <div class="container">
+        <h1>🌱 Our Garden Words</h1>
+        <p class="subtitle">Week 1: Water & Sun ~ Cut these cards and draw pictures on the back!</p>
+
+        <div class="instruction-box">
+            <strong>🌿 How to use:</strong> Cut out each card. On the back, draw a simple picture to match the word.
+            This helps your little gardener remember!
+        </div>
+
+        <div class="card-grid">
+            <div class="card card-sun">
+                <div class="icon-large">☀️</div>
+                <div class="word-large">sun</div>
+                <p class="card-back-hint">Draw: A bright yellow sun with rays</p>
+            </div>
+
+            <div class="card card-water">
+                <div class="icon-large">💧</div>
+                <div class="word-large">water</div>
+                <p class="card-back-hint">Draw: Blue water droplets</p>
+            </div>
+
+            <div class="card card-plant">
+                <div class="icon-large">🌱</div>
+                <div class="word-large">plant</div>
+                <p class="card-back-hint">Draw: A small green sprout</p>
+            </div>
+
+            <div class="card card-soil">
+                <div class="icon-large">🟤</div>
+                <div class="word-large">soil</div>
+                <p class="card-back-hint">Draw: Brown earth with texture</p>
+            </div>
+
+            <div class="card card-grow">
+                <div class="icon-large">📈</div>
+                <div class="word-large">grow</div>
+                <p class="card-back-hint">Draw: Arrow pointing up</p>
+            </div>
+        </div>
+
+        <div
+            style="margin-top: 50px; padding: 25px; background: #FFF9C4; border-radius: 20px; border: 3px dashed var(--sun-golden);">
+            <h3 style="color: var(--soil-deep); font-family: var(--font-playful); margin-bottom: 15px;">🌻 Garden Tip
+            </h3>
+            <p style="font-family: var(--font-playful); font-size: 1.2em; color: var(--soil-deep); line-height: 1.6;">
+                These five words are the seeds of your garden vocabulary! Practice them every day this week.
+                By Friday, they'll have grown strong roots in your memory! 🌿
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

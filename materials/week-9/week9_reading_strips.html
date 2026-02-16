@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 - Seed Packets</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .packet-grid {
+            display: grid;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .packet-tracker {
+            background: #EFEBE9;
+            margin-top: 50px;
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid var(--seed-brown-light);
+            text-align: center;
+        }
+
+        .day-check {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            border: 2px dashed #999;
+            margin: 10px;
+            text-align: center;
+            border-radius: 5px;
+            background: white;
+            font-family: var(--font-handwritten);
+            line-height: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Seed Packets</button>
+    <div class="container">
+        <h1>🌱 Seed Packets</h1>
+        <p style="text-align: center; font-family: var(--font-handwritten); font-size: 1.5em; margin-bottom: 20px;">
+            Read the packets. Count the seeds!
+        </p>
+
+        <div class="packet-grid">
+            <div class="strip">
+                Seeds grow into plants. 🌻
+            </div>
+
+            <div class="strip" style="background: #E3F2FD;">
+                We save seeds in groups. 🫙
+            </div>
+
+            <div class="strip" style="background: #FFFDE7;">
+                Count the seeds. 1, 2, 3...
+            </div>
+
+            <div class="strip" style="background: #E8F5E9;">
+                Big groups. Small groups.
+            </div>
+        </div>
+
+        <div class="packet-tracker">
+            <h3>Weekly Reading Count</h3>
+            <p>Did you check your packets today?</p>
+            <div class="day-check">Mon<br>☐</div>
+            <div class="day-check">Tue<br>☐</div>
+            <div class="day-check">Wed<br>☐</div>
+            <div class="day-check">Thu<br>☐</div>
+            <div class="day-check">Fri<br>☐</div>
+        </div>
+    </div>
+</body>
+
+</html>

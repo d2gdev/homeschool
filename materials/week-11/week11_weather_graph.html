@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 11 - Weather Graph</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .graph-area {
+            position: relative;
+            height: 400px;
+            border-left: 3px solid #546E7A;
+            border-bottom: 3px solid #546E7A;
+            margin: 50px 0 20px 40px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+        }
+
+        .y-labels {
+            position: absolute;
+            left: -30px;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            font-size: 1.2em;
+            color: #546E7A;
+        }
+
+        .grid-line {
+            position: absolute;
+            left: 0;
+            right: 0;
+            border-top: 1px dashed #CFD8DC;
+            width: 100%;
+        }
+
+        .bar-col {
+            width: 60px;
+            height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .bar-fill {
+            width: 100%;
+            border: 2px solid #90A4AE;
+            background: #ECEFF1;
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .x-label {
+            position: absolute;
+            bottom: -40px;
+            text-align: center;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Weather Graph</button>
+    <div class="container">
+        <h1>📊 Our Weather Graph</h1>
+        <p style="text-align: center;">Count the sunny, cloudy, and rainy days!</p>
+
+        <div class="graph-area">
+            <div class="y-labels">
+                <span>5</span><span>4</span><span>3</span><span>2</span><span>1</span><span>0</span>
+            </div>
+
+            <!-- Grid Lines -->
+            <div class="grid-line" style="bottom: 0;"></div>
+            <div class="grid-line" style="bottom: 20%;"></div>
+            <div class="grid-line" style="bottom: 40%;"></div>
+            <div class="grid-line" style="bottom: 60%;"></div>
+            <div class="grid-line" style="bottom: 80%;"></div>
+            <div class="grid-line" style="bottom: 100%;"></div>
+
+            <!-- Sunny Bar -->
+            <div class="bar-col">
+                <div class="bar-fill" style="height: 10px;"></div>
+                <div class="x-label">☀️<br><span style="font-size: 0.5em;">Sunny</span></div>
+            </div>
+
+            <!-- Cloudy Bar -->
+            <div class="bar-col">
+                <div class="bar-fill" style="height: 10px;"></div>
+                <div class="x-label">☁️<br><span style="font-size: 0.5em;">Cloudy</span></div>
+            </div>
+
+            <!-- Rainy Bar -->
+            <div class="bar-col">
+                <div class="bar-fill" style="height: 10px;"></div>
+                <div class="x-label">🌧️<br><span style="font-size: 0.5em;">Rainy</span></div>
+            </div>
+        </div>
+
+        <div style="margin-top: 60px; text-align: center; color: #78909C;">
+            Use YELLOW for Sun, GRAY for Clouds, BLUE for Rain!
+        </div>
+    </div>
+</body>
+
+</html>

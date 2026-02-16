@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 - Labels</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .label-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .seed-label {
+            border: 2px dashed #999;
+            padding: 20px;
+            text-align: center;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .seed-label::after {
+            content: '✂️ Cut';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 0.8em;
+            background: white;
+        }
+
+        .trace-text {
+            font-family: var(--font-display);
+            font-size: 2em;
+            color: #ccc;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .count-line {
+            font-family: var(--font-handwritten);
+            font-size: 1.2em;
+            text-align: left;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Seed Labels</button>
+    <div class="container">
+        <h1>🏷️ Seed Packet Labels</h1>
+        <p style="text-align: center;">Trace the words. Cut the labels. Glue on your packet!</p>
+
+        <div class="label-grid">
+            <div class="seed-label">
+                <div class="trace-text">BEAN<br>SEEDS</div>
+                <div class="count-line">Count: _______</div>
+            </div>
+
+            <div class="seed-label">
+                <div class="trace-text">FLOWER<br>SEEDS</div>
+                <div class="count-line">Count: _______</div>
+            </div>
+
+            <div class="seed-label">
+                <div class="trace-text">SUN<br>SEEDS</div>
+                <div class="count-line">Count: _______</div>
+            </div>
+
+            <div class="seed-label">
+                <div class="trace-text">BIG<br>SEEDS</div>
+                <div class="count-line">Count: _______</div>
+            </div>
+
+            <div class="seed-label">
+                <div class="trace-text">SMALL<br>SEEDS</div>
+                <div class="count-line">Count: _______</div>
+            </div>
+
+            <div class="seed-label">
+                <div class="trace-text">MY<br>SEEDS</div>
+                <div class="count-line">Count: _______</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

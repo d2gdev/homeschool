@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 12 - Master Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .badge {
+            background: var(--award-gold);
+            color: #3E2723;
+            font-size: 0.8em;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-family: var(--font-fancy);
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--emerald-green);
+            font-family: var(--font-clean);
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Master Cards</button>
+    <div class="container">
+        <h1>Master Gardener Words</h1>
+        <p class="subtitle">You know all these words! 🌱🏆</p>
+
+        <div class="card-grid">
+            <div class="card">
+                <div class="badge">MASTER</div>
+                <div class="icon-large">🏡</div>
+                <div class="word-large">garden</div>
+            </div>
+
+            <div class="card">
+                <div class="badge">MASTER</div>
+                <div class="icon-large">🌿</div>
+                <div class="word-large">plant</div>
+            </div>
+
+            <div class="card">
+                <div class="badge">MASTER</div>
+                <div class="icon-large">📈</div>
+                <div class="word-large">grow</div>
+            </div>
+
+            <div class="card">
+                <div class="badge">MASTER</div>
+                <div class="icon-large">☀️</div>
+                <div class="word-large">sun</div>
+            </div>
+
+            <div class="card">
+                <div class="badge">MASTER</div>
+                <div class="icon-large">💧</div>
+                <div class="word-large">water</div>
+            </div>
+        </div>
+
+        <div
+            style="background: var(--parchment); border: 2px solid var(--award-bronze); padding: 20px; border-radius: 15px; margin-top: 40px; text-align: center;">
+            <p style="font-family: var(--font-fancy); font-size: 2em; color: var(--award-bronze);">
+                Congratulations!
+            </p>
+            <p style="font-family: var(--font-clean); font-size: 1.2em;">
+                You have learned so many words in 12 weeks!
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 - Water Words</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .subtitle {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.4em;
+            color: var(--water-bright);
+            margin-bottom: 40px;
+        }
+
+        .card-water {
+            border-color: var(--drip-blue);
+            background: linear-gradient(135deg, #E1F5FE 0%, #B3E5FC 100%);
+        }
+
+        .card-drip {
+            border-color: var(--drip-cyan);
+            background: linear-gradient(135deg, #B3E5FC 0%, #81D4FA 100%);
+        }
+
+        .card-wet {
+            border-color: var(--moisture-teal);
+            background: linear-gradient(135deg, #B2EBF2 0%, #80DEEA 100%);
+        }
+
+        .card-dry {
+            border-color: #BCAAA4;
+            background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+        }
+
+        .card-soil {
+            border-color: #8D6E63;
+            background: linear-gradient(135deg, #D7CCC8 0%, #BCAAA4 100%);
+        }
+
+        .new-badge {
+            background: linear-gradient(135deg, #00E5FF 0%, #00BCD4 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-family: var(--font-display);
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-top: 10px;
+            display: inline-block;
+            box-shadow: 0 2px 8px rgba(0, 229, 255, 0.4);
+        }
+
+        .review-badge {
+            background: #E0E0E0;
+            color: #616161;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-family: var(--font-display);
+            font-size: 0.8em;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .irrigation-tip {
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(to right, #E1F5FE 0%, #B3E5FC 50%, #E1F5FE 100%);
+            border-radius: 25px;
+            border: 4px solid var(--drip-blue);
+        }
+
+        .irrigation-tip h3 {
+            color: var(--water-deep);
+            font-family: var(--font-water);
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        .irrigation-tip p {
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--water-deep);
+            line-height: 1.7;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Water Words</button>
+    <div class="container">
+        <h1>💧 Irrigation & Water Words</h1>
+        <p class="subtitle">Week 5: How Water Helps Plants ~ Drip by drip!</p>
+        <div class="card-grid">
+            <div class="card card-drip">
+                <div class="icon-large">💧</div>
+                <div class="word-large">drip</div>
+                <div class="new-badge">✨ NEW</div>
+            </div>
+            <div class="card card-water">
+                <div class="icon-large">💦</div>
+                <div class="word-large">water</div>
+                <div class="review-badge">Review</div>
+            </div>
+            <div class="card card-wet">
+                <div class="icon-large">💧🟦</div>
+                <div class="word-large">wet</div>
+                <div class="review-badge">Review</div>
+            </div>
+            <div class="card card-dry">
+                <div class="icon-large">☀️🟫</div>
+                <div class="word-large">dry</div>
+                <div class="review-badge">Review</div>
+            </div>
+            <div class="card card-soil">
+                <div class="icon-large">🟤</div>
+                <div class="word-large">soil</div>
+                <div class="review-badge">Review</div>
+            </div>
+        </div>
+        <div class="irrigation-tip">
+            <h3>💧 The Magic of Drip Irrigation</h3>
+            <p>This week we discover how <strong>drip</strong> systems work! <strong>Water</strong> drips slowly into
+                the <strong>soil</strong>, keeping it <strong>wet</strong> but not flooded. Plants love slow, steady
+                water better than big splashes! Watch how drip irrigation saves water and helps plants grow strong. 💧🌱
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 - Bug Reading</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tracker {
+            margin-top: 50px;
+            background: white;
+            border: 3px solid var(--soil-rich);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .tracker-grid {
+            display: flex;
+            justify-content: space-around;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        .day-box {
+            text-align: center;
+            font-family: var(--font-handwritten);
+            border: 2px dashed #ccc;
+            padding: 10px;
+            width: 60px;
+            height: 80px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Bug Strips</button>
+    <div class="container">
+        <h1>🐛 Reading About Bugs</h1>
+        <p style="text-align: center; font-family: var(--font-handwritten); font-size: 1.5em; margin-bottom: 30px;">
+            Let's find the helpers in our garden!
+        </p>
+
+        <div class="strip">
+            Bugs live in the garden. 🐞
+        </div>
+
+        <div class="strip" style="background: #E8F5E9; border-color: var(--leaf-dark);">
+            Worms help the soil. 🪱
+        </div>
+
+        <div class="strip" style="background: #FFFDE7; border-color: var(--bee-yellow);">
+            Some bugs eat leaves. 🍃
+        </div>
+
+        <div class="strip" style="background: #FCE4EC; border-color: var(--worm-pink);">
+            Worms are garden helpers. 👍
+        </div>
+
+        <div class="tracker">
+            <h3 style="font-family: var(--font-display);">Reading Tracker</h3>
+            <p style="text-align: center;">Read your bug sentences every day!</p>
+            <div class="tracker-grid">
+                <div class="day-box">M<br>☐</div>
+                <div class="day-box">T<br>☐</div>
+                <div class="day-box">W<br>☐</div>
+                <div class="day-box">Th<br>☐</div>
+                <div class="day-box">F<br>☐</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

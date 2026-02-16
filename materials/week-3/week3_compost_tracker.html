@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 - Compost Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tracker-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--soil-dark);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .compost-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 40px 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 45px rgba(121, 85, 72, 0.3);
+        }
+
+        .compost-table th {
+            background: linear-gradient(135deg, var(--compost-brown) 0%, var(--soil-rich) 100%);
+            color: white;
+            padding: 20px;
+            font-family: var(--font-display);
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .compost-table td {
+            padding: 20px;
+            border-bottom: 3px solid #EFEBE9;
+            background: white;
+        }
+
+        .compost-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .day-cell {
+            font-family: var(--font-display);
+            font-size: 1.4em;
+            font-weight: 600;
+            color: var(--compost-brown);
+            text-align: center;
+            background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%) !important;
+        }
+
+        /* Compost decomposition drawing area */
+        .compost-drawing {
+            height: 180px;
+            background: linear-gradient(to bottom,
+                    #C5E1A5 0%,
+                    #AED581 20%,
+                    #D7CCC8 40%,
+                    #BCAAA4 60%,
+                    #A1887F 80%,
+                    #8D6E63 100%);
+            border: 4px dashed var(--compost-brown);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--soil-dark);
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .compost-drawing::before {
+            content: 'Draw the scraps';
+            position: absolute;
+            top: 15px;
+            font-size: 1.1em;
+            color: var(--compost-warm);
+        }
+
+        .compost-drawing::after {
+            content: '🍂';
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 2em;
+            opacity: 0.4;
+        }
+
+        .changes-field {
+            font-family: var(--font-handwritten);
+            font-size: 1.2em;
+            color: var(--soil-dark);
+            margin-top: 10px;
+        }
+
+        .decomposition-guide {
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #C5E1A5 0%, #AED581 100%);
+            border: 5px solid var(--organic-green);
+            border-radius: 25px;
+        }
+
+        .decomposition-guide h3 {
+            font-family: var(--font-earthy);
+            font-size: 2em;
+            color: var(--soil-dark);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .decomposition-guide p {
+            font-family: var(--font-playful);
+            font-size: 1.2em;
+            color: var(--soil-dark);
+            line-height: 1.7;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Compost Tracker</button>
+
+    <div class="container">
+        <h1>🍂 Our Compost Experiment</h1>
+        <p class="tracker-intro">
+            Watch food scraps transform into soil!<br>
+            Draw what you see each day as nature does its magic 🪱
+        </p>
+
+        <table class="compost-table">
+            <thead>
+                <tr>
+                    <th style="width: 15%;">Day</th>
+                    <th>What do the scraps look like?</th>
+                    <th style="width: 35%;">Changes I Notice</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day-cell">Tuesday<br>Day 1</td>
+                    <td>
+                        <div class="compost-drawing"></div>
+                    </td>
+                    <td>
+                        <div class="changes-field">
+                            _____________________<br>
+                            _____________________<br>
+                            _____________________
+                        </div>
+                        <div
+                            style="font-family: var(--font-playful); font-size: 0.9em; color: var(--compost-warm); margin-top: 10px;">
+                            (Parent writes what child says)
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="day-cell">Wednesday<br>Day 2</td>
+                    <td>
+                        <div class="compost-drawing"></div>
+                    </td>
+                    <td>
+                        <div class="changes-field">
+                            _____________________<br>
+                            _____________________<br>
+                            _____________________
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="day-cell">Thursday<br>Day 3</td>
+                    <td>
+                        <div class="compost-drawing"></div>
+                    </td>
+                    <td>
+                        <div class="changes-field">
+                            _____________________<br>
+                            _____________________<br>
+                            _____________________
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="day-cell">Friday<br>Day 4</td>
+                    <td>
+                        <div class="compost-drawing"></div>
+                    </td>
+                    <td>
+                        <div class="changes-field">
+                            _____________________<br>
+                            _____________________<br>
+                            _____________________
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="decomposition-guide">
+            <h3>🌱 The Magic of Decomposition</h3>
+            <p>
+                Food scraps don't disappear—they transform! Banana peels, apple cores, and leaves
+                slowly break down into rich, dark soil. This is nature's recycling!
+                Watch closely each day to see the changes. 🍂→🟤
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

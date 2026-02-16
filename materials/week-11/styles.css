@@ -1,0 +1,258 @@
+/* Week 11: Weather & Plants - Sun, Rain, & Growth Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@500;700&family=Chewy&display=swap');
+
+:root {
+    /* Weather Color Palette */
+    --sun-yellow: #FFEB3B;
+    --sun-orange: #FFC107;
+
+    --rain-blue: #2196F3;
+    --rain-dark: #1976D2;
+
+    --cold-cyan: #00BCD4;
+    --hot-red: #F44336;
+
+    --cloud-white: #FFFFFF;
+    --cloud-gray: #B0BEC5;
+
+    --sky-blue: #E3F2FD;
+
+    /* Typography */
+    --font-display: 'Fredoka', sans-serif;
+    --font-clean: 'Quicksand', sans-serif;
+    --font-fun: 'Chewy', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-display);
+    /* Sky Gradient */
+    background: linear-gradient(to bottom, var(--sky-blue) 0%, #BBDEFB 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #455A64;
+    /* Blue-gray text */
+}
+
+/* Weather Station Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    border: 5px solid white;
+    box-shadow:
+        0 10px 40px rgba(33, 150, 243, 0.3),
+        inset 0 0 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Raindrop pattern overlay */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: radial-gradient(circle at 50% 10%, #FFEB3B 0%, transparent 20%);
+    /* Sun hint */
+    opacity: 0.8;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-fun);
+    color: var(--rain-dark);
+    text-align: center;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Daily Weather Columns */
+.weather-grid {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.day-column {
+    flex: 1;
+    border: 2px solid #B0BEC5;
+    border-radius: 15px;
+    background: #FAFAFA;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.day-header {
+    background: var(--rain-blue);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px 10px 0 0;
+    font-family: var(--font-fun);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.draw-box {
+    width: 100%;
+    height: 100px;
+    background: white;
+    border: 2px dashed #CFD8DC;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Thermometer Style */
+.thermo-box {
+    width: 20px;
+    height: 60px;
+    border: 2px solid #546E7A;
+    border-radius: 10px;
+    position: relative;
+    background: linear-gradient(to top, var(--hot-red) 50%, var(--cold-cyan) 50%);
+    margin: 10px auto;
+}
+
+/* Card Styles */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 6px solid #ccc;
+}
+
+.card:active {
+    transform: translateY(4px);
+    border-bottom-width: 2px;
+}
+
+/* Icon specific styles */
+.icon-sun {
+    color: var(--sun-orange);
+    text-shadow: 0 0 10px var(--sun-yellow);
+}
+
+.icon-rain {
+    color: var(--rain-blue);
+}
+
+.icon-hot {
+    color: var(--hot-red);
+}
+
+.icon-cold {
+    color: var(--cold-cyan);
+}
+
+.word-large {
+    font-family: var(--font-display);
+    font-size: 2.2em;
+    font-weight: 600;
+    color: #455A64;
+    margin: 15px 0;
+}
+
+.icon-large {
+    font-size: 4em;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* Reading Strips ("Cloud banners") */
+.strip {
+    background: white;
+    padding: 20px 40px;
+    margin: 20px 0;
+    border-radius: 50px;
+    /* Pill shape */
+    font-family: var(--font-clean);
+    font-size: 2em;
+    text-align: center;
+    color: var(--rain-dark);
+    border: 3px solid var(--sky-blue);
+    box-shadow: 0 5px 0 #B3E5FC;
+    position: relative;
+}
+
+/* Cloud puffs */
+.strip::before,
+.strip::after {
+    content: '☁️';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #B3E5FC;
+    font-size: 1.5em;
+    opacity: 0.8;
+}
+
+.strip::before {
+    left: 10px;
+}
+
+.strip::after {
+    right: 10px;
+}
+
+
+/* Print button */
+.print-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 15px 40px;
+    background: var(--rain-blue);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-display);
+    font-size: 1.3em;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        border: 2px solid #ccc;
+    }
+
+    .print-btn {
+        display: none;
+    }
+}

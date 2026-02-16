@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 - Water Level Tracking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tracking-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--water-deep);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .bottle-container {
+            margin: 50px auto;
+            max-width: 400px;
+            padding: 40px;
+            background: linear-gradient(135deg, #E1F5FE 0%, #B3E5FC 100%);
+            border: 6px solid var(--drip-blue);
+            border-radius: 40px;
+            box-shadow: 0 15px 50px rgba(0, 188, 212, 0.3);
+            position: relative;
+        }
+
+        .bottle-outline {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(to bottom, transparent 0%, transparent 20%, rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0.8) 100%);
+            border: 5px solid var(--water-deep);
+            border-radius: 20px 20px 40px 40px;
+            position: relative;
+            box-shadow: inset 0 0 30px rgba(129, 212, 250, 0.3);
+        }
+
+        .bottle-outline::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 5px solid var(--water-deep);
+            border-bottom: none;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .water-level-marker {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 3px;
+            display: flex;
+            align-items: center;
+        }
+
+        .marker-start {
+            top: 30%;
+            background: #4CAF50;
+        }
+
+        .marker-10min {
+            top: 50%;
+            background: #FF9800;
+        }
+
+        .marker-20min {
+            top: 70%;
+            background: #F44336;
+            border: 2px dashed #F44336;
+        }
+
+        .marker-label {
+            position: absolute;
+            right: -180px;
+            font-family: var(--font-display);
+            font-size: 1.1em;
+            font-weight: 600;
+            padding: 5px 15px;
+            border-radius: 15px;
+            white-space: nowrap;
+        }
+
+        .label-start {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .label-10min {
+            background: #FF9800;
+            color: white;
+        }
+
+        .label-20min {
+            background: #F44336;
+            color: white;
+        }
+
+        .measurement-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: white;
+            border: 4px solid var(--drip-blue);
+            border-radius: 20px;
+        }
+
+        .measurement-line {
+            font-family: var(--font-display);
+            font-size: 1.3em;
+            color: var(--water-deep);
+            margin: 20px 0;
+        }
+
+        .answer-blank {
+            border-bottom: 3px solid var(--drip-blue);
+            display: inline-block;
+            min-width: 80px;
+            padding: 5px 10px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Water Level Tracker</button>
+    <div class="container">
+        <h1>📊 Where Did the Water Go?</h1>
+        <p class="tracking-intro">Wednesday: Watch the water level drop as it drips!<br>Mark the levels and predict what
+            happens next 💧</p>
+        <div class="bottle-container">
+            <div class="bottle-outline">
+                <div class="water-level-marker marker-start">
+                    <div class="marker-label label-start">Start level</div>
+                </div>
+                <div class="water-level-marker marker-10min">
+                    <div class="marker-label label-10min">After 10 min</div>
+                </div>
+                <div class="water-level-marker marker-20min">
+                    <div class="marker-label label-20min">After 20 min (predict)</div>
+                </div>
+            </div>
+        </div>
+        <div class="measurement-section">
+            <div class="measurement-line">The water dropped <span class="answer-blank">_____</span> cm in 10 minutes
+            </div>
+            <div class="measurement-line">I predict it will drop <span class="answer-blank">_____</span> cm in 20
+                minutes</div>
+            <div
+                style="font-family: var(--font-playful); font-size: 1.1em; color: var(--water-bright); margin-top: 25px; text-align: center;">
+                💡 Use a ruler to measure from the start line to each new level!</div>
+        </div>
+    </div>
+</body>
+
+</html>

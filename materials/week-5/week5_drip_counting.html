@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 - Drip Counting</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .counting-intro {
+            text-align: center;
+            font-family: var(--font-playful);
+            font-size: 1.3em;
+            color: var(--water-deep);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .counting-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 40px 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 45px rgba(0, 188, 212, 0.3);
+        }
+
+        .counting-table th {
+            background: linear-gradient(135deg, var(--drip-blue) 0%, var(--water-bright) 100%);
+            color: white;
+            padding: 20px;
+            font-family: var(--font-display);
+            font-size: 1.2em;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .counting-table td {
+            padding: 20px;
+            border-bottom: 3px solid #E1F5FE;
+            background: white;
+            text-align: center;
+            font-family: var(--font-handwritten);
+            font-size: 1.2em;
+            color: var(--water-deep);
+        }
+
+        .counting-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .bottle-cell {
+            font-family: var(--font-display);
+            font-size: 1.4em;
+            font-weight: 600;
+            color: var(--drip-blue);
+            background: linear-gradient(135deg, #E1F5FE 0%, #B3E5FC 100%) !important;
+        }
+
+        .conclusion-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #B3E5FC 0%, #81D4FA 100%);
+            border: 5px solid var(--drip-blue);
+            border-radius: 25px;
+        }
+
+        .conclusion-title {
+            font-family: var(--font-display);
+            font-size: 1.6em;
+            color: white;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .conclusion-answer {
+            background: white;
+            border: 3px dashed var(--drip-cyan);
+            border-radius: 15px;
+            padding: 20px;
+            font-family: var(--font-handwritten);
+            font-size: 1.3em;
+            color: var(--water-deep);
+            min-height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Drip Counter</button>
+    <div class="container">
+        <h1>💧 How Fast Does It Drip?</h1>
+        <p class="counting-intro">Monday-Tuesday: Test different bottle holes!<br>Count the drips and find the best
+            speed 🚰</p>
+        <table class="counting-table">
+            <thead>
+                <tr>
+                    <th>Bottle</th>
+                    <th>Hole Size</th>
+                    <th>Drops in 30 sec</th>
+                    <th>Drops in 1 min</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="bottle-cell">Bottle 1</td>
+                    <td>⭕ small ⭕ big</td>
+                    <td>_______</td>
+                    <td>_______</td>
+                </tr>
+                <tr>
+                    <td class="bottle-cell">Bottle 2</td>
+                    <td>⭕ small ⭕ big</td>
+                    <td>_______</td>
+                    <td>_______</td>
+                </tr>
+                <tr>
+                    <td class="bottle-cell">Bottle 3</td>
+                    <td>⭕ small ⭕ big</td>
+                    <td>_______</td>
+                    <td>_______</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="conclusion-section">
+            <div class="conclusion-title">🌱 Which drip speed is best?</div>
+            <div class="conclusion-answer">The best drip speed is: _______________</div>
+            <div class="conclusion-answer" style="margin-top: 15px;">Because:
+                ________________________________________________</div>
+            <div
+                style="font-family: var(--font-playful); font-size: 1em; color: white; margin-top: 15px; text-align: center;">
+                (Parent writes what child says)</div>
+        </div>
+    </div>
+</body>
+
+</html>

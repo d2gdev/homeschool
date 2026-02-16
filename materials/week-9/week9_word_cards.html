@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 - Seed Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .subtitle {
+            text-align: center;
+            font-family: var(--font-handwritten);
+            font-size: 1.5em;
+            color: var(--seed-brown-light);
+            margin-bottom: 30px;
+        }
+
+        /* Grouping Colors */
+        .card-seed {
+            border-color: var(--seed-brown-dark);
+            background: #EFEBE9;
+        }
+
+        .card-group {
+            border-color: var(--group-blue);
+            background: #E3F2FD;
+            box-shadow: 0 0 0 5px rgba(66, 165, 245, 0.2);
+        }
+
+        .card-plant {
+            border-color: var(--group-green);
+            background: #E8F5E9;
+        }
+
+        .card-save {
+            border-color: var(--group-yellow);
+            background: #FFFDE7;
+        }
+
+        .card-count {
+            border-color: var(--group-red);
+            background: #FFEBEE;
+        }
+
+        .badge {
+            background: var(--group-blue);
+            color: white;
+            padding: 2px 8px;
+            font-size: 0.7em;
+            border-radius: 5px;
+            position: absolute;
+            top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Seed Cards</button>
+    <div class="container">
+        <h1>🌱 Seeds & Groups</h1>
+        <p class="subtitle">Week 9: Sorting, Counting, Saving</p>
+
+        <div class="card-grid">
+            <div class="card card-seed">
+                <div class="badge">Reused</div>
+                <div class="icon-large">🌰</div>
+                <div class="word-large">seed</div>
+            </div>
+
+            <div class="card card-group">
+                <div class="badge">NEW</div>
+                <div class="icon-large">🔵🔵</div>
+                <div class="word-large">group</div>
+            </div>
+
+            <div class="card card-plant">
+                <div class="badge">Reused</div>
+                <div class="icon-large">🌿</div>
+                <div class="word-large">plant</div>
+            </div>
+
+            <div class="card card-save">
+                <div class="badge">NEW</div>
+                <div class="icon-large">🫙</div> <!-- Jar for saving -->
+                <div class="word-large">save</div>
+            </div>
+
+            <div class="card card-count">
+                <div class="badge">Reused</div>
+                <div class="icon-large">🔢</div>
+                <div class="word-large">count</div>
+            </div>
+        </div>
+
+        <div
+            style="text-align: center; margin-top: 40px; font-family: var(--font-round); border: 2px dashed #ccc; padding: 20px; border-radius: 15px;">
+            <strong>Sorting Tip:</strong> Put all the seed cards in one group!<br>
+            Sort these cards by color! How many groups?
+        </div>
+    </div>
+</body>
+
+</html>
