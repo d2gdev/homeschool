@@ -1788,6 +1788,7 @@ body {
   --bgTop: #EAF6FF;
   --bgMid: #F7FFF0;
   --bgBot: #EAF8E6;
+  --site-bg-image: url('/garden-background.png');
 
   --bg: #F7FFF0;
   --card: #FFFFFF;
@@ -1825,7 +1826,14 @@ body {
    Fredoka (headings) + Inter (body) */
 body {
   font-family: 'Inter', 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: linear-gradient(180deg, var(--bgTop) 0%, var(--bgMid) 52%, var(--bgBot) 100%);
+  background:
+    linear-gradient(180deg, rgba(234, 246, 255, 0.68) 0%, rgba(247, 255, 240, 0.74) 56%, rgba(234, 248, 230, 0.76) 100%),
+    var(--site-bg-image),
+    linear-gradient(180deg, var(--bgTop) 0%, var(--bgMid) 52%, var(--bgBot) 100%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--text);
   position: relative;
 }
